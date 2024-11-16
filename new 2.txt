@@ -1,0 +1,565 @@
+export interface Question {
+  key: number;
+  value: string;
+  iconPath: unknown;
+}
+
+export interface SurveySection {
+  id: string;
+  name: string;
+}
+
+export interface SurveyAnswer {
+  selectedOption?: string[];
+  feedback?: string;
+  rating?: string;
+}
+
+export interface Answers {
+  [key: string]: SurveyAnswer;
+}
+
+"use client";
+
+import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import angryAnimation from "@/data/animations/angry.json";
+import sadAnimation from "@/data/animations/sad.json";
+import mehAnimation from "@/data/animations/normal.json";
+import happyAnimation from "@/data/animations/happy.json";
+import veryHappyAnimation from "@/data/animations/supprise.json";
+interface SatisfactionRatingProps {
+  question: string;
+  initialAnswer: string | null;
+  onAnswerChange: (answer: string) => void;
+}
+
+interface Rating {
+  level: string;
+  animationData: unknown;
+  label: string;
+}
+
+const SatisfactionRating = ({
+  question,
+  onAnswerChange,
+  initialAnswer,
+}: SatisfactionRatingProps) => {
+  const [rating, setRating] = useState<string | null>(null);
+
+  useEffect(() => {
+    setRating(initialAnswer);
+  }, [initialAnswer]);
+
+  const ratings: Rating[] = [
+    {
+      level: "very_dissatisfied",
+      animationData: angryAnimation,
+      label: "Rất không hài lòng",
+    },
+    {
+      level: "dissatisfied",
+      animationData: sadAnimation,
+      label: "Không hài lòng",
+    },
+    {
+      level: "neutral",
+      animationData: mehAnimation,
+      label: "Bình thường",
+    },
+    {
+      level: "satisfied",
+      animationData: happyAnimation,
+      label: "Hài lòng",
+    },
+    {
+      level: "very_satisfied",
+      animationData: veryHappyAnimation,
+      label: "Rất hài lòng",
+    },
+  ];
+
+  const handleRatingChange = (level: string) => {
+    setRating(level);
+    onAnswerChange(level);
+  };
+
+  return (
+    <div className="my-4 py-6">
+      <h2 className="font-bold text-2xl mb-12">{question}</h2>{" "}
+      <div className="flex space-x-2 mt-2 gap-6">
+        {ratings.map(({ level, animationData, label }) => (
+          <button
+            key={level}
+            className={`p-2 rounded-lg flex flex-col items-center ${
+              rating === level ? "bg-gray-200" : ""
+            }`}
+            onClick={() => handleRatingChange(level)}
+          >
+            <Lottie animationData={animationData} />
+            <div className="text-center mt-12 text-2xl">{label}</div>{" "}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SatisfactionRating;
+
+import Unamused from "@/data/animations/dissatisfied/1_Unamused_Tho_o.json";
+import Angry from "@/data/animations/dissatisfied/2_Angry_Kho_chiu.json";
+import Thinking from "@/data/animations/satisfied/2_Thinking.json";
+import Rolling from "@/data/animations/dissatisfied/4_Rolling_Eyes_Thieu_tin_tuong.json";
+import Broken from "@/data/animations/dissatisfied/5_Broken_hearth_Kham_qua_loa.json";
+import Pencil from "@/data/animations/dissatisfied/6_Pencil_Y_kien_khac.json";
+
+import Hugging from "@/data/animations/satisfied/1_Hugging_face.json";
+import Hearth from "@/data/animations/satisfied/3_Hearth.json";
+import Like from "@/data/animations/satisfied/4_Like.json";
+import Exp from "@/data/animations/satisfied/5_Experiences.json";
+
+export const satisfiedWithExamination = [
+  {
+    key: 1,
+    value: "BS thân thiện, dễ gần",
+    iconPath: Hugging,
+  },
+  {
+    key: 2,
+    value: "BS tư vấn đầy đủ, rõ ràng",
+    iconPath: Thinking,
+  },
+  {
+    key: 3,
+    value:
+      "BS nắm bắt rất tốt tâm lý KH/ Bs đồng cảm, thấu hiểu cảm xúc của KH",
+    iconPath: Hearth,
+  },
+  {
+    key: 4,
+    value: "BS có chuyên môn giỏi, đáng tin cậy",
+    iconPath: Like,
+  },
+  {
+    key: 5,
+    value: "BS có nhiều kinh nghiệm",
+    iconPath: Exp,
+  },
+  {
+    key: 6,
+    value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+export const satisfiedWithUltrasound = [
+  {
+    key: 1,
+    value: "BS thân thiện, dễ gần",
+    iconPath: Hugging,
+  },
+  {
+    key: 2,
+    value: "BS tư vấn đầy đủ, rõ ràng",
+    iconPath: Thinking,
+  },
+  {
+    key: 3,
+    value: "Bác sĩ đồng cảm, thấu hiểu cảm xúc của khách hàng",
+    iconPath: Hearth,
+  },
+  {
+    key: 4,
+    value: "Bác sĩ chủ động hỗ trợ khi gặp khó khăn",
+    iconPath: Like,
+  },
+  {
+    key: 5,
+    value: "Bác sĩ có để tâm đến khách hàng khi siêu âm",
+    iconPath: Exp,
+  },
+  {
+    key: 6,
+    value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+
+export const dissatisfiedWithExamination = [
+  {
+    key: 1,
+    value:
+      "BS thờ ơ, không quan tâm/ Bs cần nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi",
+    iconPath: Unamused,
+  },
+  {
+    key: 2,
+    value:
+      "BS không vui vẻ, khó chịu/ BS cần vui vẻ, thân thiện với tôi và người đi cùng",
+    iconPath: Angry,
+  },
+  {
+    key: 3,
+    value:
+      "BS tư vấn không đầy đủ/ Mong muốn Bs tư vấn và giải thích nhiều hơn cho tôi",
+    iconPath: Thinking,
+  },
+  {
+    key: 4,
+    value:
+      "BS chưa tạo được tin tưởng/ Bs cần tạo thêm sự tin tưởng cho tôi và gia đình",
+    iconPath: Rolling,
+  },
+  {
+    key: 5,
+    value:
+      "BS khám qua loa/ Bs cần khám kỹ và dành thời gian nhiều hơn cho tôi",
+    iconPath: Broken,
+  },
+  {
+    key: 6,
+    value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+export const dissatisfiedWithUltrasound = [
+  {
+    key: 1,
+    value: "Bác sĩ thờ ơ, không quan tâm",
+    iconPath: Unamused,
+  },
+  {
+    key: 2,
+    value: "Bác sĩ không vui vẻ, khó chịu",
+    iconPath: Angry,
+  },
+  {
+    key: 3,
+    value: "Bác sĩ không chủ động tương tác",
+    iconPath: Thinking,
+  },
+  {
+    key: 4,
+    value: "Bác sĩ không hỗ trợ khi gặp khó khăn",
+    iconPath: Rolling,
+  },
+  {
+    key: 5,
+    value: "Bác sĩ siêu âm qua loa",
+    iconPath: Broken,
+  },
+  {
+    key: 6,
+    value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+
+import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Question } from "@/types";
+
+interface MultipleChoiceQuestionProps {
+  question: string;
+  options: Question[];
+  onAnswerChange: (answers: {
+    selectedOptions: number[];
+    feedback: string;
+  }) => void;
+  initialAnswer: number[] | undefined;
+}
+const MultipleChoiceQuestion = ({
+  question,
+  options,
+  onAnswerChange,
+  initialAnswer,
+}: MultipleChoiceQuestionProps) => {
+  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
+  console.log("🚀 ~ selectedOptions:", selectedOptions);
+
+  const [feedback, setFeedback] = useState<string>("");
+
+  const toggleOption = (option: number) => {
+    const updatedOptions = selectedOptions.includes(option)
+      ? selectedOptions.filter((item) => item !== option)
+      : [...selectedOptions, option];
+    setSelectedOptions(updatedOptions);
+    onAnswerChange({ selectedOptions: updatedOptions, feedback });
+  };
+
+  const handleFeedbackChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const updatedFeedback = e.target.value;
+    setFeedback(updatedFeedback);
+    onAnswerChange({ selectedOptions, feedback: updatedFeedback });
+  };
+
+  return (
+    <div className="my-4">
+      <p className="mb-3 text-2xl font-semibold">{question}</p>
+      <div className="flex flex-col gap-3 px-3">
+        {options.map((option) => (
+          <div className="flex items-center space-x-2" key={option.key}>
+            <Button
+              variant={
+                selectedOptions.includes(option.key) ? "default" : "outline"
+              }
+              onClick={() => toggleOption(option.key)}
+              className="flex items-center justify-start space-x-2 text-wrap text-left px-6 py-12 h-16"
+            >
+              <Lottie
+                animationData={option.iconPath}
+                loop={true}
+                style={{ width: "60px", height: "60px" }}
+              />
+              <span className="text-2xl font-normal">{option.value}</span>
+            </Button>
+          </div>
+        ))}
+        {selectedOptions.includes(6) && (
+          <Textarea
+            placeholder="Nhập ý kiến của bạn ..."
+            value={feedback}
+            onChange={handleFeedbackChange}
+            rows={4}
+            className="p-6"
+            style={{ fontSize: "1.25rem" }}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MultipleChoiceQuestion;
+
+"use client";
+
+import SatisfactionRating from "@/components/SatisfactionRating";
+import MultipleChoiceQuestion from "@/components/MultipleChoiceQuestion";
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import ThankYouPage from "@/app/thank-you/page";
+import {
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import {
+  dissatisfiedWithExamination,
+  satisfiedWithExamination,
+} from "@/data/questions";
+import BoxReveal from "./magic-ui/box-reveal";
+
+const sections = [
+  { name: "Bác sĩ khám", id: "Bác sĩ khám" },
+  { name: "Bác sĩ siêu âm", id: "Bác sĩ siêu âm" },
+  { name: "Nhân viên CSKH", id: "Nhân viên CSKH" },
+];
+
+const SurveyForm = () => {
+  const [selectedSections, setSelectedSections] = useState<string[]>([]);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [isStarted, setIsStarted] = useState(false);
+  const [answers, setAnswers] = useState<{
+    [key: string]: any;
+  }>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSectionToggle = (sectionId: string) => {
+    setSelectedSections((prev) =>
+      prev.includes(sectionId)
+        ? prev.filter((s) => s !== sectionId)
+        : [...prev, sectionId]
+    );
+  };
+
+  const handleStart = () => {
+    setIsStarted(true);
+  };
+
+  const handleAnswerChange = (questionId: string, answer: any) => {
+    setAnswers((prev) => ({ ...prev, [questionId]: answer }));
+  };
+
+  const handleNext = () => {
+    console.log("Next");
+    const section = selectedSections[currentSectionIndex];
+    const questionId = `${section}-${currentQuestionIndex}`;
+    if (!answers[questionId]) {
+      alert("Please answer the current question before proceeding.");
+      return;
+    }
+
+    if (currentQuestionIndex < 2) {
+      setCurrentQuestionIndex((prev) => prev + 1);
+    } else if (currentSectionIndex < selectedSections.length - 1) {
+      setCurrentSectionIndex((prev) => prev + 1);
+      setCurrentQuestionIndex(0);
+    }
+  };
+
+  const handleBack = () => {
+    console.log("Back");
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prev) => prev - 1);
+    } else if (currentSectionIndex > 0) {
+      setCurrentSectionIndex((prev) => prev - 1);
+      setCurrentQuestionIndex(2);
+    }
+  };
+
+  const handleSubmit = () => {
+    const unansweredQuestion = selectedSections.some((sectionId) =>
+      [0, 1, 2].some(
+        (questionIndex) => !answers[`${sectionId}-${questionIndex}`]
+      )
+    );
+
+    if (unansweredQuestion) {
+      alert("Please answer all questions before submitting.");
+    } else {
+      console.log("Survey submitted:", answers);
+      setIsSubmitted(true);
+    }
+  };
+
+  const renderQuestion = () => {
+    const section = selectedSections[currentSectionIndex];
+    const questionId = `${section}-${currentQuestionIndex}`;
+    const currentAnswer = answers[questionId];
+    const questions = [
+      <SatisfactionRating
+        key="satisfaction"
+        question={`Bạn hài lòng thế nào với ${section}?`}
+        initialAnswer={currentAnswer}
+        onAnswerChange={(answer) => handleAnswerChange(questionId, answer)}
+      />,
+      <MultipleChoiceQuestion
+        key="dissatisfied"
+        question="Bạn không hài lòng điều gì về nhân viên vừa rồi?"
+        options={dissatisfiedWithExamination}
+        initialAnswer={currentAnswer}
+        onAnswerChange={(answer) => handleAnswerChange(questionId, answer)}
+      />,
+      <MultipleChoiceQuestion
+        key="satisfied"
+        question="Bạn hài lòng điều gì về nhân viên vừa rồi?"
+        options={satisfiedWithExamination}
+        initialAnswer={currentAnswer}
+        onAnswerChange={(answer) => handleAnswerChange(questionId, answer)}
+      />,
+    ];
+    return questions[currentQuestionIndex];
+  };
+
+  return (
+    <div className="select-none max-w-5xl border border-dashed rounded-xl border-teal-500 flex items-center justify-center ">
+      <CardContent className="bg-gray-100  h-auto rounded-xl p-6">
+        {!isStarted && (
+          <>
+            <CardHeader className="">
+              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                <div className="font-semibold text-[3rem] leading-[3rem] p-2">
+                  Khảo sát độ hài lòng khách hàng{" "}
+                  <span className="text-[#5046e6]">.</span>
+                </div>
+              </BoxReveal>
+            </CardHeader>
+
+            <CardHeader className="text-neutral-800 text-3xl dark:text-neutral-300">
+              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                <>
+                  Nhằm cải thiện chất lượng{" "}
+                  <span className="font-semibold text-[#5046e6]">sản phẩm</span>{" "}
+                  ,{" "}
+                  <span className="font-semibold text-[#5046e6]">dịch vụ</span>{" "}
+                  và{" "}
+                  <span className="font-semibold text-[#5046e6]">
+                    trải nghiệm{" "}
+                  </span>
+                  khách hàng. <br />
+                </>
+              </BoxReveal>
+            </CardHeader>
+          </>
+        )}
+        <CardHeader className="w-full select-none">
+          {!isStarted ? (
+            <div className="w-full">
+              <CardDescription className="text-3xl text-neutral-800">
+                Chọn nội dung cần đánh giá:
+              </CardDescription>
+              <CardContent className="-ml-3 text-md">
+                {sections.map((section) => (
+                  <div
+                    className="h-full flex items-center space-x-2 space-y-2 select-none"
+                    key={section.id}
+                  >
+                    <Checkbox
+                      id={section.id}
+                      checked={selectedSections.includes(section.id)}
+                      onCheckedChange={() => handleSectionToggle(section.id)}
+                      className="w-8 h-8 "
+                    />
+                    <label htmlFor={section.id} className="">
+                      <span className="text-3xl">{section.name}</span>
+                    </label>
+                  </div>
+                ))}
+              </CardContent>
+              <CardFooter className="w-full flex justify-center items-center">
+                <Button
+                  onClick={handleStart}
+                  disabled={selectedSections.length === 0}
+                  className="mt-6 text-2xl p-9 flex items-center justify-center bg-[#5046e6] hover:bg-[#6969ff]"
+                >
+                  Start
+                </Button>
+              </CardFooter>
+            </div>
+          ) : isSubmitted ? (
+            <ThankYouPage />
+          ) : (
+            <div>
+              {renderQuestion()}
+              <div className="flex justify-between mt-4">
+                <Button
+                  className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
+                  onClick={handleBack}
+                  disabled={
+                    currentQuestionIndex === 0 && currentSectionIndex === 0
+                  }
+                >
+                  Back
+                </Button>
+                {currentSectionIndex === selectedSections.length - 1 &&
+                currentQuestionIndex === 2 ? (
+                  <Button
+                    className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6]  hover:bg-[#6969ff]"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </Button>
+                ) : (
+                  <Button
+                    className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
+                    onClick={handleNext}
+                  >
+                    Next
+                  </Button>
+                )}
+              </div>
+            </div>
+          )}
+        </CardHeader>
+      </CardContent>
+    </div>
+  );
+};
+
+export default SurveyForm;

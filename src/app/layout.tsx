@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import QueryProvider from "@/providers/QueryProvider";
+import { Toaster } from "sonner";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +15,11 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +35,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <QueryProvider>
+          <div className="w-full h-screen relative" style={{}}>
+            <BackgroundGradientAnimation />
+            <div className="absolute inset-0 flex items-center justify-center px-4 z-50 w-full">
+              <div className="pointer-events-auto mx-auto ">{children}</div>
+            </div>
+          </div>
+        </QueryProvider>
+        <Toaster richColors position="top-center" duration={3000} closeButton />
       </body>
     </html>
   );
