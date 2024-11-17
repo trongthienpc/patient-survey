@@ -3,33 +3,37 @@ import Lottie from "lottie-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Question } from "@/types";
+import { cn } from "@/lib/utils";
+import { OTHER_COMMENT } from "@/constants";
 
 interface MultipleChoiceQuestionProps {
+  id: string;
   question: string;
   options: Question[];
   onAnswerChange: (answers: {
-    selectedOptions: number[];
+    selectedOptions: string[];
     feedback: string;
   }) => void;
-  initialAnswer: number[] | undefined;
+  initialAnswer: string[] | undefined;
 }
 const MultipleChoiceQuestion = ({
   question,
   options,
   onAnswerChange,
   initialAnswer,
+  id,
 }: MultipleChoiceQuestionProps) => {
-  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<string>("");
 
   useEffect(() => {
     if (initialAnswer) setSelectedOptions(initialAnswer);
   }, [initialAnswer]);
 
-  const toggleOption = (option: number) => {
-    const updatedOptions = selectedOptions.includes(option)
-      ? selectedOptions.filter((item) => item !== option)
-      : [...selectedOptions, option];
+  const toggleOption = (option: Question) => {
+    const updatedOptions = selectedOptions.includes(option.value)
+      ? selectedOptions.filter((item) => item !== option.value)
+      : [...selectedOptions, option.value];
     setSelectedOptions(updatedOptions);
     onAnswerChange({ selectedOptions: updatedOptions, feedback });
   };
@@ -42,16 +46,23 @@ const MultipleChoiceQuestion = ({
 
   return (
     <div className="my-4">
-      <p className="mb-3 text-2xl font-semibold">{question}</p>
+      <p
+        className={cn(
+          "mb-3 text-2xl font-semibold",
+          id === "satisfied" ? "text-violet-500" : "text-amber-500"
+        )}
+      >
+        {question}
+      </p>
       <div className="grid lg:grid-cols-2 gap-3">
         {options.map((option) => (
-          <div className="flex items-center space-x-2" key={option.key}>
+          <div className="flex items-center space-x-2 w-full" key={option.key}>
             <Button
               variant={
-                selectedOptions.includes(option.key) ? "default" : "outline"
+                selectedOptions.includes(option.value) ? "default" : "outline"
               }
-              onClick={() => toggleOption(option.key)}
-              className=" flex items-center justify-start space-x-2 text-wrap text-left h-24"
+              onClick={() => toggleOption(option)}
+              className="w-full flex items-center justify-start space-x-2 text-wrap text-left h-24 border border-dashed border-violet-500"
             >
               <Lottie
                 animationData={option.iconPath}
@@ -63,7 +74,7 @@ const MultipleChoiceQuestion = ({
           </div>
         ))}
       </div>
-      {selectedOptions.includes(6) && (
+      {selectedOptions.includes(OTHER_COMMENT) && (
         <Textarea
           placeholder="Nhập ý kiến của bạn ..."
           value={feedback}

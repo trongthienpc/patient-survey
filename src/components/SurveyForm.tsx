@@ -3,7 +3,6 @@
 import SatisfactionRating from "@/components/SatisfactionRating";
 import MultipleChoiceQuestion from "@/components/MultipleChoiceQuestion";
 import { useCallback, useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import ThankYouPage from "@/app/thank-you/page";
 import {
@@ -19,6 +18,8 @@ import {
 import BoxReveal from "./magic-ui/box-reveal";
 import { Answers, SurveyAnswer } from "@/types";
 import { toast } from "sonner";
+import Actor from "./Actor";
+import AnimatedCheckbox from "./AnimatedCheckbox";
 
 const sections = [
   { name: "Bác sĩ khám", id: "Bác sĩ khám" },
@@ -32,7 +33,6 @@ const SurveyForm = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
   const [answers, setAnswers] = useState<Answers>({});
-  console.log("🚀 ~ SurveyForm ~ answers:", answers);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSectionToggle = useCallback((sectionId: string) => {
@@ -62,9 +62,7 @@ const SurveyForm = () => {
       if (direction === "next") {
         const section = selectedSections[currentSectionIndex];
         const questionId = `${section}-${currentQuestionIndex}`;
-        console.log("🚀 ~ SurveyForm ~ questionId:", questionId);
         const currentAnswer = answers[questionId];
-        console.log("🚀 ~ SurveyForm ~ currentAnswer:", currentAnswer);
 
         if (
           !currentAnswer ||
@@ -108,52 +106,57 @@ const SurveyForm = () => {
   }, [answers, selectedSections]);
 
   const renderQuestion = () => {
-    if (
-      selectedSections.length === 0 ||
-      currentSectionIndex >= selectedSections.length
-    ) {
-      return null;
-    }
+    if (!selectedSections[currentSectionIndex]) return null;
+
     const section = selectedSections[currentSectionIndex];
     const questionId = `${section}-${currentQuestionIndex}`;
-    const currentAnswer = answers[questionId] || {};
-    const shouldShowDissatisfied =
-      currentAnswer?.rating === "very_dissatisfied" ||
-      currentAnswer?.rating === "dissatisfied";
-    console.log(
-      "🚀 ~ renderQuestion ~ shouldShowDissatisfied:",
-      shouldShowDissatisfied
+    const currentAnswer = answers[questionId];
+
+    if (currentQuestionIndex === 0) {
+      return (
+        <div className="overflow-scroll max-h-[720px] flex flex-col gap-9">
+          <Actor
+            initialAnswer={currentAnswer?.room || []}
+            onAnswerChange={(room: string[] | undefined) =>
+              handleAnswerChange(questionId, { room })
+            }
+          />
+          <SatisfactionRating
+            key="satisfaction"
+            question={`Bạn hài lòng thế nào với ${section}?`}
+            initialAnswer={currentAnswer?.rating}
+            onAnswerChange={(rating) =>
+              handleAnswerChange(questionId, { rating })
+            }
+          />
+        </div>
+      );
+    }
+
+    const showDissatisfied = ["very_dissatisfied", "dissatisfied"].includes(
+      answers[`${section}-0`]?.rating || ""
     );
-    const questions = [
-      <SatisfactionRating
-        key="satisfaction"
-        question={`Bạn hài lòng thế nào với ${section}?`}
-        initialAnswer={currentAnswer?.rating}
-        onAnswerChange={(rating: string) =>
-          handleAnswerChange(questionId, { rating })
+
+    return (
+      <MultipleChoiceQuestion
+        key="choices"
+        id={showDissatisfied ? "dissatisfied" : "satisfied"}
+        question={
+          showDissatisfied
+            ? "Bạn không hài lòng điều gì về nhân viên vừa rồi?"
+            : "Bạn hài lòng điều gì về nhân viên vừa rồi?"
         }
-      />,
-      shouldShowDissatisfied ? (
-        <MultipleChoiceQuestion
-          key="dissatisfied"
-          question="Bạn không hài lòng điều gì về nhân viên vừa rồi?"
-          options={dissatisfiedWithExamination}
-          initialAnswer={currentAnswer.selectedOptions}
-          onAnswerChange={({ selectedOptions, feedback }) =>
-            handleAnswerChange(questionId, { selectedOptions, feedback })
-          }
-        />
-      ) : (
-        <MultipleChoiceQuestion
-          key="satisfied"
-          question="Bạn hài lòng điều gì về nhân viên vừa rồi?"
-          options={satisfiedWithExamination}
-          initialAnswer={currentAnswer.selectedOptions}
-          onAnswerChange={(answer) => handleAnswerChange(questionId, answer)}
-        />
-      ),
-    ];
-    return questions[currentQuestionIndex];
+        options={
+          showDissatisfied
+            ? dissatisfiedWithExamination
+            : satisfiedWithExamination
+        }
+        initialAnswer={currentAnswer?.selectedOptions}
+        onAnswerChange={({ selectedOptions, feedback }) =>
+          handleAnswerChange(questionId, { selectedOptions, feedback })
+        }
+      />
+    );
   };
 
   return (
@@ -191,24 +194,16 @@ const SurveyForm = () => {
           {!isStarted ? (
             <div className="w-full">
               <CardDescription className="text-3xl text-neutral-800">
-                Chọn nội dung cần đánh giá:
+                Vui lòng chọn nội dung cần đánh giá:
               </CardDescription>
-              <CardContent className="-ml-3 text-md">
+              <CardContent className="-ml-3 mt-3 flex flex-col gap-3 justify-center">
                 {sections.map((section) => (
-                  <div
-                    className="h-full flex items-center space-x-2 space-y-2 select-none"
+                  <AnimatedCheckbox
+                    section={section}
+                    selectedSections={selectedSections}
+                    handleSectionToggle={handleSectionToggle}
                     key={section.id}
-                  >
-                    <Checkbox
-                      id={section.id}
-                      checked={selectedSections.includes(section.id)}
-                      onCheckedChange={() => handleSectionToggle(section.id)}
-                      className="w-8 h-8 "
-                    />
-                    <label htmlFor={section.id} className="">
-                      <span className="text-3xl">{section.name}</span>
-                    </label>
-                  </div>
+                  />
                 ))}
               </CardContent>
               <CardFooter className="w-full flex justify-center items-center">

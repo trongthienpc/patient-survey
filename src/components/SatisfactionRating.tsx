@@ -64,9 +64,9 @@ const SatisfactionRating = ({
   };
 
   return (
-    <div className="my-4 py-6">
-      <h2 className="font-bold text-2xl mb-12">{question}</h2>{" "}
-      <div className="flex space-x-2 mt-2 gap-6">
+    <div className="w-full overflow-scroll">
+      <h2 className="font-bold text-2xl mb-6 text-violet-500">{question}</h2>{" "}
+      <div className="grid grid-cols-5 gap-6">
         {ratings.map(({ level, animationData, label }) => (
           <button
             key={level}
@@ -75,8 +75,8 @@ const SatisfactionRating = ({
             }`}
             onClick={() => handleRatingChange(level)}
           >
-            <Lottie animationData={animationData} />
-            <div className="text-center mt-12 text-xl font-semibold">
+            <Lottie animationData={animationData} style={{ width: 100 }} />
+            <div className="text-center mt-9 text-xl font-semibold">
               {label}
             </div>{" "}
           </button>

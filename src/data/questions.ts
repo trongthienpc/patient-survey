@@ -43,6 +43,7 @@ export const satisfiedWithExamination = [
     iconPath: Pencil,
   },
 ];
+
 export const satisfiedWithUltrasound = [
   {
     key: 1,
@@ -113,6 +114,7 @@ export const dissatisfiedWithExamination = [
     iconPath: Pencil,
   },
 ];
+
 export const dissatisfiedWithUltrasound = [
   {
     key: 1,

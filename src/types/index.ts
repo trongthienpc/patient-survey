@@ -10,9 +10,11 @@ export interface SurveySection {
 }
 
 export interface SurveyAnswer {
-  selectedOptions?: number[];
+  selectedOptions?: string[];
   feedback?: string;
   rating?: string;
+  room?: string[];
+  doctor?: string;
 }
 
 export interface Answers {
