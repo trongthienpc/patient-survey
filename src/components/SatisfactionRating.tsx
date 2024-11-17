@@ -75,8 +75,10 @@ const SatisfactionRating = ({
             }`}
             onClick={() => handleRatingChange(level)}
           >
-            <Lottie animationData={animationData} style={{ width: 100 }} />
-            <div className="text-center mt-9 text-xl font-semibold">
+            <div>
+              <Lottie animationData={animationData} style={{ width: 80 }} />
+            </div>
+            <div className="text-center mt-3 text-xl font-semibold">
               {label}
             </div>{" "}
           </button>

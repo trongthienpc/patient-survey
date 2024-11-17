@@ -34,7 +34,9 @@ const ThankYouPage = () => {
           </h2>
         </div>
         <div>
-          <p className="mt-2 text-4xl">Kính chúc Quý khách nhiều sức khỏe!</p>
+          <p className="mt-2 text-4xl leading-[3rem]">
+            Kính chúc <br /> Quý khách nhiều sức khỏe!
+          </p>
         </div>
       </div>
       <div className="flex gap-3">

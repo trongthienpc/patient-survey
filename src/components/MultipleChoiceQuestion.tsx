@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Question } from "@/types";
 import { cn } from "@/lib/utils";
@@ -45,7 +44,7 @@ const MultipleChoiceQuestion = ({
   };
 
   return (
-    <div className="my-4">
+    <div className="my-2 h-full">
       <p
         className={cn(
           "mb-3 text-2xl font-semibold",
@@ -56,21 +55,28 @@ const MultipleChoiceQuestion = ({
       </p>
       <div className="grid lg:grid-cols-2 gap-3">
         {options.map((option) => (
-          <div className="flex items-center space-x-2 w-full" key={option.key}>
-            <Button
-              variant={
-                selectedOptions.includes(option.value) ? "default" : "outline"
-              }
+          <div
+            className="flex items-center justify-center w-full"
+            key={option.key}
+          >
+            <div
               onClick={() => toggleOption(option)}
-              className="w-full flex items-center justify-start space-x-2 text-wrap text-left h-24 border border-dashed border-violet-500"
+              className={cn(
+                "w-full flex items-center justify-start space-x-2 text-wrap text-left h-28 rounded border border-dashed border-violet-500",
+                selectedOptions.includes(option.value)
+                  ? "bg-violet-500 text-white"
+                  : ""
+              )}
             >
-              <Lottie
-                animationData={option.iconPath}
-                loop={true}
-                style={{ width: "60px", height: "60px" }}
-              />
+              <div>
+                <Lottie
+                  animationData={option.iconPath}
+                  loop={true}
+                  style={{ width: "60px", height: "60px" }}
+                />
+              </div>
               <span className="text-xl font-normal">{option.value}</span>
-            </Button>
+            </div>
           </div>
         ))}
       </div>

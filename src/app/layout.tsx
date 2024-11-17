@@ -38,10 +38,12 @@ export default function RootLayout({
         className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <QueryProvider>
-          <div className="w-full h-screen relative" style={{}}>
+          <div className="w-full h-screen relative bg-amber-300" style={{}}>
             <BackgroundGradientAnimation />
-            <div className="absolute inset-0 flex items-center justify-center px-4 z-50 w-full">
-              <div className="pointer-events-auto mx-auto ">{children}</div>
+            <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+              <div className="max-w-7xl max-h-screen overflow-y-scroll px-6">
+                {children}
+              </div>
             </div>
           </div>
         </QueryProvider>

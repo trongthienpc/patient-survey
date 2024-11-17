@@ -20,6 +20,7 @@ import { Answers, SurveyAnswer } from "@/types";
 import { toast } from "sonner";
 import Actor from "./Actor";
 import AnimatedCheckbox from "./AnimatedCheckbox";
+import Image from "next/image";
 
 const sections = [
   { name: "Bác sĩ khám", id: "Bác sĩ khám" },
@@ -56,6 +57,19 @@ const SurveyForm = () => {
     },
     []
   );
+
+  const sectionImages: { [key: string]: string } = {
+    "Bác sĩ khám": "/doctor-1.jpg",
+    "Bác sĩ siêu âm": "/doctor-2.jpg",
+    "Nhân viên CSKH": "/care.jpg",
+  };
+  const getCurrentImage = () => {
+    if (!isStarted) return "/nurse.webp";
+    return (
+      // eslint-disable-next-line no-var
+      sectionImages[selectedSections[currentSectionIndex]] || "/nurse.webp"
+    );
+  };
 
   const handleNavigation = useCallback(
     (direction: "next" | "back") => {
@@ -160,98 +174,113 @@ const SurveyForm = () => {
   };
 
   return (
-    <div className="select-none max-w-5xl border border-dashed rounded-xl border-teal-500 flex items-center justify-center ">
-      <CardContent className="bg-gray-100  h-auto rounded-xl p-6">
-        {!isStarted && (
-          <>
-            <CardHeader className="">
-              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                <div className="font-semibold text-[3rem] leading-[3rem] p-2">
-                  Khảo sát độ hài lòng khách hàng{" "}
-                  <span className="text-[#5046e6]">.</span>
-                </div>
-              </BoxReveal>
-            </CardHeader>
+    <div className="select-none border border-dashed rounded-xl border-teal-500 grid grid-cols-3 h-full">
+      <div className="col-span-2">
+        <CardContent className="bg-gray-100  h-auto rounded-tl-xl rounded-bl-xl p-6">
+          {!isStarted && (
+            <>
+              <CardHeader className="">
+                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                  <div className="font-semibold text-[3rem] leading-[3rem] p-2">
+                    Khảo sát độ hài lòng khách hàng{" "}
+                    <span className="text-[#5046e6]">.</span>
+                  </div>
+                </BoxReveal>
+              </CardHeader>
 
-            <CardHeader className="text-neutral-800 text-3xl dark:text-neutral-300">
-              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                <>
-                  Nhằm cải thiện chất lượng{" "}
-                  <span className="font-semibold text-[#5046e6]">sản phẩm</span>{" "}
-                  ,{" "}
-                  <span className="font-semibold text-[#5046e6]">dịch vụ</span>{" "}
-                  và{" "}
-                  <span className="font-semibold text-[#5046e6]">
-                    trải nghiệm{" "}
-                  </span>
-                  khách hàng. <br />
-                </>
-              </BoxReveal>
-            </CardHeader>
-          </>
-        )}
-        <CardHeader className="w-full select-none">
-          {!isStarted ? (
-            <div className="w-full">
-              <CardDescription className="text-3xl text-neutral-800">
-                Vui lòng chọn nội dung cần đánh giá:
-              </CardDescription>
-              <CardContent className="-ml-3 mt-3 flex flex-col gap-3 justify-center">
-                {sections.map((section) => (
-                  <AnimatedCheckbox
-                    section={section}
-                    selectedSections={selectedSections}
-                    handleSectionToggle={handleSectionToggle}
-                    key={section.id}
-                  />
-                ))}
-              </CardContent>
-              <CardFooter className="w-full flex justify-center items-center">
-                <Button
-                  onClick={handleStart}
-                  disabled={selectedSections.length === 0}
-                  className="mt-6 text-2xl p-9 flex items-center justify-center bg-[#5046e6] hover:bg-[#6969ff]"
-                >
-                  Start
-                </Button>
-              </CardFooter>
-            </div>
-          ) : isSubmitted ? (
-            <ThankYouPage />
-          ) : (
-            <div className="h-full overflow-hidden">
-              {renderQuestion()}
-              <div className="flex justify-between mt-4">
-                <Button
-                  className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
-                  onClick={() => handleNavigation("back")}
-                  disabled={
-                    currentQuestionIndex === 0 && currentSectionIndex === 0
-                  }
-                >
-                  Back
-                </Button>
-                {currentSectionIndex === selectedSections.length - 1 &&
-                currentQuestionIndex === 1 ? (
+              <CardHeader className="text-neutral-800 text-3xl dark:text-neutral-300">
+                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                  <>
+                    Nhằm cải thiện chất lượng{" "}
+                    <span className="font-semibold text-[#5046e6]">
+                      sản phẩm
+                    </span>{" "}
+                    ,{" "}
+                    <span className="font-semibold text-[#5046e6]">
+                      dịch vụ
+                    </span>{" "}
+                    và{" "}
+                    <span className="font-semibold text-[#5046e6]">
+                      trải nghiệm{" "}
+                    </span>
+                    khách hàng. <br />
+                  </>
+                </BoxReveal>
+              </CardHeader>
+            </>
+          )}
+          <CardHeader className="w-full select-none">
+            {!isStarted ? (
+              <div className="w-full">
+                <CardDescription className="text-3xl text-neutral-800">
+                  Vui lòng chọn nội dung cần đánh giá:
+                </CardDescription>
+                <CardContent className="-ml-3 mt-3 flex flex-col gap-3 justify-center">
+                  {sections.map((section) => (
+                    <AnimatedCheckbox
+                      section={section}
+                      selectedSections={selectedSections}
+                      handleSectionToggle={handleSectionToggle}
+                      key={section.id}
+                    />
+                  ))}
+                </CardContent>
+                <CardFooter className="w-full flex justify-center items-center">
                   <Button
-                    className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6]  hover:bg-[#6969ff]"
-                    onClick={handleSubmit}
+                    onClick={handleStart}
+                    disabled={selectedSections.length === 0}
+                    className="mt-6 text-2xl p-9 flex items-center justify-center bg-[#5046e6] hover:bg-[#6969ff]"
                   >
-                    Submit
+                    Start
                   </Button>
-                ) : (
+                </CardFooter>
+              </div>
+            ) : isSubmitted ? (
+              <ThankYouPage />
+            ) : (
+              <div className="h-full overflow-hidden">
+                {renderQuestion()}
+                <div className="flex justify-between mt-4">
                   <Button
                     className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
-                    onClick={() => handleNavigation("next")}
+                    onClick={() => handleNavigation("back")}
+                    disabled={
+                      currentQuestionIndex === 0 && currentSectionIndex === 0
+                    }
                   >
-                    Next
+                    Back
                   </Button>
-                )}
+                  {currentSectionIndex === selectedSections.length - 1 &&
+                  currentQuestionIndex === 1 ? (
+                    <Button
+                      className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6]  hover:bg-[#6969ff]"
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </Button>
+                  ) : (
+                    <Button
+                      className="select-none cursor-pointer text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
+                      onClick={() => handleNavigation("next")}
+                    >
+                      Next
+                    </Button>
+                  )}
+                </div>
               </div>
-            </div>
-          )}
-        </CardHeader>
-      </CardContent>
+            )}
+          </CardHeader>
+        </CardContent>
+      </div>
+      <div className="relative h-full">
+        <Image
+          src={getCurrentImage()}
+          alt="medical staff"
+          fill
+          className="object-cover rounded-tr-xl rounded-br-xl transition-all ease-in-out duration-500"
+          priority
+        />
+      </div>
     </div>
   );
 };
