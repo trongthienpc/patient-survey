@@ -15,7 +15,6 @@ export default function AnimatedCheckbox({
   handleSectionToggle,
 }: AnimatedCheckboxProps) {
   const isChecked = selectedSections.includes(section.id);
-  console.log("🚀 ~ isChecked:", isChecked);
 
   return (
     <div

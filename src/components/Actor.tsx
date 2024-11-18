@@ -14,7 +14,6 @@ const Actor = ({ initialAnswer, onAnswerChange }: ActorProps) => {
     setRoom(initialAnswer);
   }, [initialAnswer]);
   const handleRoomChange = (value: string) => {
-    console.log("🚀 ~ handleRoomChange ~ value:", value);
     setRoom(
       room.includes(value)
         ? room.filter((item) => item !== value)

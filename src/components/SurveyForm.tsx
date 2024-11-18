@@ -194,7 +194,7 @@ const SurveyForm = () => {
                     Nhằm cải thiện chất lượng{" "}
                     <span className="font-semibold text-[#5046e6]">
                       sản phẩm
-                    </span>{" "}
+                    </span>
                     ,{" "}
                     <span className="font-semibold text-[#5046e6]">
                       dịch vụ
