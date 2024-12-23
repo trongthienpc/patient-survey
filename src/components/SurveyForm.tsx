@@ -22,6 +22,8 @@ import Actor from "./Actor";
 import AnimatedCheckbox from "./AnimatedCheckbox";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 const sections = [
   { name: "Bác sĩ khám", id: "Bác sĩ khám" },
   { name: "Bác sĩ siêu âm", id: "Bác sĩ siêu âm" },
