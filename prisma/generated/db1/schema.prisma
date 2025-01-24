@@ -1,0 +1,90 @@
+// Prisma Client generator for interacting with the database
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/db1"
+}
+
+// PostgreSQL as the data source
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_1")
+}
+
+// Main Survey model that captures overall survey data 
+model Survey {
+  id                  String   @id @default(cuid()) // Unique ID for each survey
+  createdAt           DateTime @default(now()) // Timestamp of survey creation
+  updatedAt           DateTime @updatedAt // Timestamp of last update
+  overallSatisfaction Float? // Average satisfaction score across sections
+
+  // Relations to specific survey sections for doctor examination, ultrasound, and customer care
+  doctorExaminationSection SurveySection @relation("DoctorExaminationSurvey", fields: [doctorExaminationSectionId], references: [id])
+  doctorUltrasoundSection  SurveySection @relation("DoctorUltrasoundSurvey", fields: [doctorUltrasoundSectionId], references: [id])
+  customerCareSection      SurveySection @relation("CustomerCareSurvey", fields: [customerCareSectionId], references: [id])
+
+  doctorExaminationSectionId String @unique
+  doctorUltrasoundSectionId  String @unique
+  customerCareSectionId      String @unique
+}
+
+// SurveySection model representing a specific part of a survey (e.g., doctor examination, ultrasound, or customer care)
+model SurveySection {
+  id           String  @id @default(cuid()) // Unique ID for each survey section
+  sectionType  String // Type of section (e.g., "Doctor Examination")
+  satisfaction Int // Satisfaction score (1-5)
+  feedback     String? // Optional field for additional feedback
+
+  // Backward relation to Survey with multiple named relations for each section type
+  surveyDoctorExamination Survey? @relation("DoctorExaminationSurvey")
+  surveyDoctorUltrasound  Survey? @relation("DoctorUltrasoundSurvey")
+  surveyCustomerCare      Survey? @relation("CustomerCareSurvey")
+
+  // Relations to reasons for satisfaction or dissatisfaction
+  dissatisfied DissatisfiedReason[]
+  satisfied    SatisfiedReason[]
+
+  // Relation to Doctor and Department (optional, if a survey is specific to a doctor or department)
+  doctor       Doctor?     @relation(fields: [doctorId], references: [id])
+  doctorId     String?
+  department   Department? @relation(fields: [departmentId], references: [id])
+  departmentId String?
+}
+
+// Model for reasons given for dissatisfaction in a survey section
+model DissatisfiedReason {
+  id      String @id @default(cuid()) // Unique ID for each reason
+  content String // Description of dissatisfaction reason
+
+  // Relation back to SurveySection model
+  surveySectionId String
+  surveySection   SurveySection @relation(fields: [surveySectionId], references: [id])
+}
+
+// Model for reasons given for satisfaction in a survey section
+model SatisfiedReason {
+  id      String @id @default(cuid()) // Unique ID for each reason
+  content String // Description of satisfaction reason
+
+  // Relation back to SurveySection model
+  surveySectionId String
+  surveySection   SurveySection @relation(fields: [surveySectionId], references: [id])
+}
+
+// Doctor model representing individual doctors associated with surveys
+model Doctor {
+  id            String          @id @default(cuid()) // Unique ID for each doctor
+  code          String          @unique // Code of the doctor
+  name          String // Name of the doctor
+  SurveySection SurveySection[]
+}
+
+// Department model representing hospital departments associated with surveys
+model Department {
+  id            String          @id @default(cuid()) // Unique ID for each department
+  code          String // Code of the department
+  name          String // Name of the department
+  branchId      String? // Optional field for branch ID
+  SurveySection SurveySection[]
+
+  @@unique([code, branchId])
+}

@@ -1,0 +1,476 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/db2"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL_1")
+}
+
+model CashierData {
+  Id            String    @id(map: "PK_CashierData") @db.NVarChar(100)
+  IdChiNhanh    String?   @db.NVarChar(50)
+  ChiNhanh      String?   @db.NVarChar(50)
+  IdPhieuThu    String?   @db.NVarChar(50)
+  IdNhanVien    String?   @db.NVarChar(50)
+  HoTenNhanVien String?   @db.NVarChar(200)
+  NgayThu       DateTime? @db.DateTime
+  IdBenhNhan    String?   @db.NVarChar(50)
+  HoTenBenhNhan String?   @db.NVarChar(200)
+  NamSinh       String?   @db.NVarChar(50)
+  TinhThanh     String?   @db.NVarChar(100)
+  IdTiepNhan    Int?
+  DoiTuong      String?   @db.NVarChar(50)
+  LoaiTiepNhan  String?   @db.NVarChar(50)
+  KhamBenhVe    Boolean?
+  LoaiPhieu     String?   @db.NVarChar(50)
+  IdPCD         String?   @db.NVarChar(50)
+  TienTamUng    Float?
+  TUConLai      Float?
+  DenTu         String?   @db.NVarChar(50)
+  ChuyenKhoa    String?   @db.NVarChar(50)
+  IdChiTiet     Int?
+  IdDichVu      String?   @db.NVarChar(50)
+  TenDichVu     String?   @db.NVarChar(200)
+  PhanLoai      String?   @db.NVarChar(50)
+  LoaiHang      String?   @db.NVarChar(50)
+  CoBHYT        Boolean?
+  SoLuong       Float?
+  DonVi         String?   @db.NVarChar(50)
+  DonGia        Float?
+  GiaBHYT       Float?
+  ThanhTien     Float?
+  BHYTChi       Float?
+  ThanhTienBHYT Float?
+  TongTien      Float?
+  ChenhLech     Float?
+  GiamGia       Float?
+  TienGiam      Float?
+  ThanhToan     Float?
+  TienGuiMau    Float?
+
+  @@index([IdChiNhanh], map: "IdChiNhanh_Asc")
+  @@index([IdChiTiet(sort: Desc)], map: "IdChiTiet_Desc")
+}
+
+model DrugRevenueData {
+  Id            String    @id(map: "PK__DrugReve__3214EC07C552FDEE") @db.NVarChar(100)
+  IdChiNhanh    String?   @db.NVarChar(50)
+  ChiNhanh      String?   @db.NVarChar(50)
+  IdXuatKho     String?   @db.NVarChar(50)
+  IdToaThuoc    String?   @db.NVarChar(50)
+  IdNhanVien    String?   @db.NVarChar(50)
+  HoTenNhanVien String?   @db.NVarChar(100)
+  IdPhongKham   String?   @db.NVarChar(50)
+  TenPhongKham  String?   @db.NVarChar(100)
+  IdBenhNhan    String?   @db.NVarChar(50)
+  HoTenBenhNhan String?   @db.NVarChar(100)
+  DoiTuong      String?   @db.NVarChar(100)
+  NgayXuat      DateTime? @db.DateTime
+  LoaiPhieu     String?   @db.NVarChar(100)
+  MaNghiepVu    String?   @db.NVarChar(50)
+  IdKho         String?   @db.NVarChar(50)
+  TenKho        String?   @db.NVarChar(100)
+  TongTien      Float?
+  ChietKhau     Float?
+  TienTruocThue Float?
+  ThanhTien     Float?
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model NhanSuNghiViec {
+  IdNhanVien String? @db.NVarChar(50)
+
+  @@ignore
+}
+
+model PC_Bangluong {
+  id_bangluong       Int       @id(map: "pk_PC_Bangluong") @default(autoincrement())
+  id_chinhanh        String?   @db.NVarChar(2)
+  id_nhanvien        String?   @db.NVarChar(15)
+  nam_luong          Int?
+  thang_luong        Int?
+  chitiet_luong      Bytes?    @db.Image
+  luong_sanpham      Bytes?    @db.Image
+  id_nhanvien_upload String?   @db.NVarChar(15)
+  ngay_upload        DateTime? @db.DateTime
+}
+
+model PC_Bantin {
+  id_Bantin       Int       @id(map: "pk_PC_Bantin") @default(autoincrement())
+  Tieude          String?   @db.NVarChar(120)
+  Tomtat          String?   @db.NVarChar(999)
+  Noidung         String?   @db.NVarChar(Max)
+  Url_Images      String?   @db.NVarChar(500)
+  id_Chinhanh     String?   @db.NVarChar(2)
+  id_KP_Banhanh   String?   @db.NVarChar(20)
+  Ten_KP_Banhanh  String?   @db.NVarChar(120)
+  id_To_Banhanh   String?   @db.NVarChar(20)
+  Ten_To_Banhanh  String?   @db.NVarChar(120)
+  id_NV_Them      String?   @db.NVarChar(50)
+  Ngaydang        DateTime? @db.DateTime
+  Ngay_Hethan     DateTime? @db.DateTime
+  Hienthi_Home    Boolean?
+  Sudung          Boolean?
+  Luotxem         Int?
+  Ghim_Bantin     Boolean?
+  Bantin_Tapdoan  Boolean?
+  id_DMPhanloai   Int?
+  TenPhanloai     String?   @db.NVarChar(100)
+  id_DMPhanloaiCT Int?
+  TenChitiet      String?   @db.NVarChar(200)
+  Url_Video       String?   @db.NVarChar(500)
+
+  @@index([Ngaydang(sort: Desc), id_DMPhanloai(sort: Desc)], map: "Datetime_Desc")
+}
+
+model PC_Benhnhan {
+  id_Benhnhan                 String    @id(map: "pk_PC_Benhnhan") @db.NVarChar(12)
+  Hoten                       String?   @db.NVarChar(500)
+  Ten                         String?   @db.NVarChar(50)
+  Hotenkhongdau               String?   @db.NVarChar(100)
+  Ngaythangnamsinh            String?   @db.NVarChar(10)
+  Namsinh                     String?   @db.NVarChar(4)
+  Gioitinh                    String?   @db.NVarChar(10)
+  Noilamviec                  String?   @db.NVarChar(500)
+  SoCMND                      String?   @db.NVarChar(20)
+  Email                       String?   @db.NVarChar(50)
+  Dienthoai_didong            String?   @db.NVarChar(12)
+  Tamtru_diachi               String?   @db.NVarChar(200)
+  Tamtru_xaphuong             String?   @db.NVarChar(100)
+  Tamtru_idXaphuong           String?   @db.NVarChar(20)
+  Tamtru_quanhuyen            String?   @db.NVarChar(100)
+  Tamtru_idQuanhuyen          String?   @db.NVarChar(20)
+  Tamtru_tinhthanh            String?   @db.NVarChar(100)
+  Tamtru_idTinhthanh          String?   @db.NVarChar(20)
+  id_DMQuoctich               String?   @db.NVarChar(20)
+  Quoctich                    String?   @db.NVarChar(100)
+  id_DMNghenghiep             String?   @db.NVarChar(20)
+  Nghenghiep                  String?   @db.NVarChar(100)
+  id_DMDantoc                 String?   @db.NVarChar(20)
+  Dantoc                      String?   @db.NVarChar(100)
+  id_DMTongiao                String?   @db.NVarChar(20)
+  Tongiao                     String?   @db.NVarChar(100)
+  Trangthai                   String?   @db.NVarChar(50)
+  Cogiadinh                   Boolean?
+  Ngaygiotaohoso              DateTime? @db.DateTime
+  id_Nhanvien                 String?   @db.NVarChar(20)
+  DCNuocngoai                 Boolean?
+  id_ChiNhanh                 String?   @db.NVarChar(2)
+  id_BenhnhanMoi              String?   @db.NVarChar(15)
+  id_BenhnhanMe               String?   @db.NVarChar(20)
+  MahosoIVF                   String?   @db.NVarChar(20)
+  BNLH_Ten                    String?   @db.NVarChar(100)
+  BNLH_DiaChi                 String?   @db.NVarChar(500)
+  BNLH_SoDienThoai            String?   @db.NVarChar(100)
+  BNLH_QuanHe                 String?   @db.NVarChar(50)
+  BNTT_Para                   String?   @db.NVarChar(5)
+  BNTT_TienSuBanThan          String?   @db.NVarChar(500)
+  BNTT_TienSuGD               String?   @db.NVarChar(500)
+  BNTT_SanhTaiBV              Boolean?
+  BNTT_DuocSinhTaiBV          Boolean?
+  BNTT_MaTiemngua             String?   @db.NVarChar(20)
+  BNTT_ChoTrung               Boolean?
+  BNTT_NhanTrung_TenVo        String?   @db.NVarChar(100)
+  BNTT_NhanTrung_NamsinhVo    String?   @db.NVarChar(4)
+  BNTT_NhanTrung_TenChong     String?   @db.NVarChar(100)
+  BNTT_NhanTrung_NamsinhChong String?   @db.NVarChar(4)
+  Sync_Version                Int?
+  Sync_Date                   DateTime? @db.DateTime
+  Sync_To_All                 Boolean?
+  Sync_By_Branch              String?   @db.NVarChar(2)
+}
+
+model PC_Customer {
+  pcId            String    @id(map: "pk_PC_Customer") @db.NVarChar(15)
+  name            String?   @db.NVarChar(200)
+  birthday        String?   @db.NVarChar(15)
+  phoneNumber     String?   @db.NVarChar(15)
+  gender          String?   @db.NVarChar(10)
+  idCardNo        String?   @db.NVarChar(20)
+  email           String?   @db.NVarChar(50)
+  careerCode      String?   @db.NVarChar(20)
+  nationalityCode String?   @db.NVarChar(20)
+  ethnicCode      String?   @db.NVarChar(20)
+  countryCode     String?   @db.NVarChar(10)
+  cityCode        String?   @db.NVarChar(10)
+  districtCode    String?   @db.NVarChar(10)
+  wardCode        String?   @db.NVarChar(10)
+  homeAddress     String?   @db.NVarChar(300)
+  managerId       String?   @db.NVarChar(15)
+  status          String?   @db.NVarChar(50)
+  createdAt       DateTime? @db.DateTime
+  updatedAt       DateTime? @db.DateTime
+  deletedAt       DateTime? @db.DateTime
+}
+
+model PC_HosoIVF {
+  id_HosoIVF      Int       @id(map: "pk_PC_HosoIVF") @default(autoincrement())
+  MasoHS          String?   @db.NVarChar(50)
+  Namluutru       Int?
+  Sohientai       Int?
+  id_BN_Vo        String?   @db.NVarChar(30)
+  id_BN_Chong     String?   @db.NVarChar(30)
+  Trangthai       String?   @db.NVarChar(100)
+  Ngaytao         DateTime? @db.DateTime
+  id_nhanvien     String?   @db.NVarChar(20)
+  id_Khoaphong    String?   @db.NVarChar(150)
+  Phanloai        String?   @db.NVarChar(100)
+  Ghichu          String?   @db.NVarChar(500)
+  id_BSGuibenh    String?   @db.NVarChar(30)
+  Hoten_BSGuibenh String?   @db.NVarChar(150)
+  id_ChiNhanh     String?   @db.NVarChar(2)
+  Sync_Version    Int?
+  Sync_Date       DateTime? @db.DateTime
+  Sync_To_All     Boolean?
+  Sync_By_Branch  String?   @db.NVarChar(2)
+}
+
+model PC_Module {
+  id_Module    Int     @id(map: "pk_PC_Module") @default(autoincrement())
+  enumModule   String? @db.NVarChar(50)
+  TenModule    String? @db.NVarChar(100)
+  Loai_Ungdung String? @db.NVarChar(20)
+}
+
+model PC_Module_NhomTK {
+  id_MDNhom    Int      @id(map: "pk_PC_Module_NhomTK") @default(autoincrement())
+  enum_Module  String?  @db.NVarChar(100)
+  enum_NhomTK  String?  @db.NVarChar(100)
+  Mod_Xem      Boolean?
+  Mod_Them     Boolean?
+  Mod_Sua      Boolean?
+  Mod_Xoa      Boolean?
+  Mod_Xuat     Boolean?
+  Ghichu       String?  @db.NVarChar(200)
+  Loai_Ungdung String?  @db.NVarChar(20)
+}
+
+model PC_Nhanvien {
+  ID_Nhanvien   String    @id(map: "pk_PC_Nhanvien") @db.NVarChar(50)
+  Hoten         String?   @db.NVarChar(100)
+  Ten           String?   @db.NVarChar(20)
+  Ngaysinh      String?   @db.NVarChar(10)
+  Namsinh       String?   @db.NVarChar(4)
+  Gioitinh      String?   @db.NVarChar(4)
+  Dienthoai     String?   @db.NVarChar(50)
+  Email         String?   @db.NVarChar(100)
+  ID_NhomNV     String?   @db.NVarChar(20)
+  Ten_NhomNV    String?   @db.NVarChar(80)
+  id_DMPhongban String?   @db.NVarChar(20)
+  Phongban      String?   @db.NVarChar(150)
+  id_DMTonhom   String?   @db.NVarChar(20)
+  Tonhom        String?   @db.NVarChar(150)
+  ID_Chinhanh   String?   @db.NVarChar(2)
+  Diachi        String?   @db.NVarChar(500)
+  Trangthai     String?   @db.NVarChar(100)
+  Ngayvaolam    DateTime? @db.DateTime
+  AnhProfile    String?   @db.NVarChar(500)
+  Sync_Version  Int?
+  Sync_End      Boolean?
+}
+
+model PC_Nhanvien_Media {
+  id_Nhanvien String @id(map: "pk_PC_Nhanvien_Media") @db.NVarChar(20)
+  AnhProfile  Bytes? @db.Image
+}
+
+model PC_NhomTaikhoan {
+  id_NhomTK Int      @id(map: "pk_PC_NhomTaikhoan") @default(autoincrement())
+  enumNhom  String?  @db.NVarChar(50)
+  TenNhom   String?  @db.NVarChar(80)
+  Sudung    Boolean?
+}
+
+model PC_Phienban {
+  ID_Phienban  String    @id(map: "pk_PC_Phienban") @db.NVarChar(20)
+  Ten          String?   @db.NVarChar(150)
+  Ngayphathanh DateTime? @db.DateTime
+  Duongdan     String?   @db.NVarChar(200)
+  Kichhoat     Boolean?
+  Ghichu       String?   @db.NVarChar(150)
+}
+
+model PC_Taikhoan {
+  id_User        String    @id(map: "pk_PC_Taikhoan") @db.NVarChar(50)
+  Password       String?   @db.NVarChar(150)
+  Name           String?   @db.NVarChar(100)
+  Email          String?   @db.NVarChar(120)
+  Device_IMEI    String?   @db.NVarChar(150)
+  Device_OS      String?   @db.NVarChar(50)
+  Device_Version String?   @db.NVarChar(10)
+  DateCreate     DateTime? @db.DateTime
+  DaDoiPass      Boolean?
+  Active         Boolean?
+  Disable        Boolean?
+  LastLogin      DateTime? @db.DateTime
+  LastLogin_Web  DateTime? @db.DateTime
+  Login_App      Boolean?
+  Login_Web      Boolean?
+  Avatar         String?   @db.VarChar(300)
+  ID_ChiNhanh    String?   @db.NVarChar(2)
+}
+
+model PC_Taikhoan_Bangluong {
+  id              Int       @id(map: "pk_PC_Taikhoan_Bangluong") @default(autoincrement())
+  id_taikhoan     String?   @db.NVarChar(15)
+  HotenNV         String?   @db.NVarChar(120)
+  id_nhanvien_cap String?   @db.NVarChar(15)
+  ngaycap         DateTime? @db.DateTime
+  sdt_nhan_pass   String?   @db.NVarChar(10)
+  da_gui_sms      Boolean?
+  trangthai_sms   String?   @db.NVarChar(300)
+  Pass_bill_luong String?   @db.NVarChar(4000)
+}
+
+model PC_Thanhvien {
+  id_TV       Int     @id(map: "pk_PC_Thanhvien") @default(autoincrement())
+  enum_NhomTK String? @db.NVarChar(100)
+  id_User     String? @db.NVarChar(50)
+}
+
+model PC_TheCapphat {
+  id_TheCapphat  Int       @id(map: "pk_PC_TheCapphat") @default(autoincrement())
+  id_Benhnhan    String?   @db.NVarChar(20)
+  Hoten_Benhnhan String?   @db.NVarChar(100)
+  Ngaysinh       String?   @db.NVarChar(12)
+  Ngaycapthe     DateTime? @db.DateTime
+  id_NVCap       String?   @db.NVarChar(20)
+  Hoten_NVCap    String?   @db.NVarChar(100)
+  id_Dauthe      String?   @db.NVarChar(5)
+  MaThe          String?   @db.NVarChar(20)
+  Diem_Congthem  Int?
+  Lydo_Congdiem  String?   @db.NVarChar(150)
+  id_NVCongdiem  String?   @db.NVarChar(20)
+  Trangthai      String?   @db.NVarChar(100)
+  LydoKhoa       String?   @db.NVarChar(30)
+  Ngayhethan     DateTime? @db.DateTime
+  DoituongSudung String?   @db.NVarChar(100)
+  TTNguoiNhanThe String?   @db.NVarChar(200)
+  CongdongBau    String?   @db.NVarChar(10)
+  Nangcap_PCCARE Boolean?
+  Ngaynang       DateTime? @db.DateTime
+  id_ChiNhanh    String?   @db.NVarChar(2)
+  Sync_Version   Int?
+  Sync_Date      DateTime? @db.DateTime
+  Sync_To_All    Boolean?
+  Sync_By_Branch String?   @db.NVarChar(2)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model PC_TiemNgua {
+  id            Int      @default(autoincrement())
+  thang_canduoi Int?
+  thang_cantren Int?
+  thang_tiem    String?  @db.NVarChar(300)
+  thang_tiem_en String?  @db.NVarChar(300)
+  vaccine_vi    String?  @db.NVarChar(Max)
+  vaccine_en    String?  @db.NVarChar(Max)
+  sudung        Boolean?
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model PC_TiemNgua_ChiTiet {
+  id         String   @db.VarChar(200)
+  tieu_de    String?  @db.NVarChar(500)
+  mota_vi    String?  @db.NVarChar(Max)
+  tieu_de_en String?  @db.NVarChar(Max)
+  mota_en    String?  @db.NVarChar(Max)
+  sudung     Boolean?
+
+  @@ignore
+}
+
+model tbl_Phishing {
+  id          Int     @id(map: "PK_tbl_Phishing") @default(autoincrement())
+  userid      String? @db.NVarChar(50)
+  username    String? @db.NVarChar(500)
+  phone       String? @db.NVarChar(50)
+  email       String? @db.NVarChar(100)
+  description String? @db.NVarChar(250)
+  branchID    String? @db.NVarChar(5)
+  branchName  String? @db.NVarChar(50)
+  deptID      String? @db.NVarChar(50)
+  deptName    String? @db.NVarChar(500)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model tbl_user {
+  pid String? @db.NVarChar(50)
+
+  @@ignore
+}
+
+model USER_PORTAL {
+  PID  String  @id(map: "PK_USER_PORTAL") @db.NVarChar(50)
+  Name String? @db.NVarChar(150)
+}
+
+model WS_DMChinhanh {
+  ID_ChiNhanh    String   @id(map: "pk_WS_DMChinhanh") @db.NVarChar(2)
+  RSA_Public_Key String?  @db.NVarChar(500)
+  Url_WS         String?  @db.NVarChar(500)
+  Ten_ChiNhanh   String?  @db.NVarChar(200)
+  Sudung         Boolean?
+  Ghichu         String?  @db.NVarChar(200)
+  Url_Webnoibo   String?  @db.NVarChar(500)
+}
+
+model WS_DMDonvi {
+  id_DMDonvi   String   @id(map: "pk_WS_DMDonvi") @db.NVarChar(15)
+  Ten_Donvi    String?  @db.NVarChar(80)
+  id_Khoaphong String?  @db.NVarChar(15)
+  id_ChiNhanh  String?  @db.NVarChar(2)
+  Sudung       Boolean?
+}
+
+model WS_DMKhoaPhong {
+  id_Khoaphong String   @db.NVarChar(15)
+  Ten          String?  @db.NVarChar(80)
+  id_KPCha     String?  @db.NVarChar(15)
+  ID_ChiNhanh  String   @db.NVarChar(2)
+  Ghichu       String?  @db.NVarChar(120)
+  Sudung       Boolean?
+  VanHanh      Boolean?
+
+  @@id([id_Khoaphong, ID_ChiNhanh], map: "pk_WS_DMKhoaPhong")
+}
+
+model WS_DMNhomTochuc {
+  id_DMNhomTochuc String   @db.NVarChar(15)
+  id_DMChinhanh   String   @db.NVarChar(15)
+  Ten             String?  @db.NVarChar(150)
+  Ghichu          String?  @db.NVarChar(150)
+  Sudung          Boolean?
+
+  @@id([id_DMNhomTochuc, id_DMChinhanh], map: "pk_WS_DMNhomTochuc")
+}
+
+model WS_Log {
+  id_Log          Int       @id(map: "pk_WS_Log") @default(autoincrement())
+  id_TaiKhoan     Int?
+  Taikhoan        String?   @db.NVarChar(200)
+  Ngaygio         DateTime? @db.DateTime
+  ResponseCode    String?   @db.NVarChar(200)
+  UserHostName    String?   @db.NVarChar(500)
+  UserHostAddress String?   @db.NVarChar(500)
+  QueryString     String?   @db.NVarChar(999)
+  HttpMethod      String?   @db.NVarChar(30)
+  ClientBrowser   String?   @db.NVarChar(100)
+
+  @@index([Ngaygio(sort: Desc)], map: "ngaygio_desc")
+}
+
+model WS_Taikhoan {
+  id_TaiKhoan   Int       @id(map: "pk_WS_Taikhoan") @default(autoincrement())
+  Taikhoan      String?   @db.NVarChar(200)
+  Matkhau       String?   @db.NVarChar(500)
+  ID_ChiNhanh   String?   @db.NVarChar(2)
+  NgaygioTao    DateTime? @db.DateTime
+  NgaygioHetHan DateTime? @db.DateTime
+  SuDung        Boolean?
+  GhiChu        String?   @db.NVarChar(300)
+}

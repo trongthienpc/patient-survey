@@ -1,6 +1,6 @@
 "use server";
 
-import { prisma } from "@/lib/db";
+import { prismaDb1, prismaDb2 } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 
 export async function submitSurvey(
@@ -18,7 +18,7 @@ export async function submitSurvey(
       formData.get("Customer Care") as string
     );
 
-    await prisma.survey.create({
+    await prismaDb1.survey.create({
       data: {
         doctorExaminationSection: {
           create: {
@@ -84,7 +84,7 @@ export async function submitSurvey(
 
 export async function getSurveyReport() {
   try {
-    const doctorStats = await prisma.doctor.findMany({
+    const doctorStats = await prismaDb1.doctor.findMany({
       select: {
         id: true,
         name: true,
@@ -96,7 +96,7 @@ export async function getSurveyReport() {
       },
     });
 
-    const departmentStats = await prisma.department.findMany({
+    const departmentStats = await prismaDb1.department.findMany({
       select: {
         id: true,
         name: true,
@@ -108,7 +108,7 @@ export async function getSurveyReport() {
       },
     });
 
-    const satisfactionStats = await prisma.surveySection.findMany({
+    const satisfactionStats = await prismaDb1.surveySection.findMany({
       include: {
         dissatisfied: true,
         satisfied: true,
@@ -173,5 +173,51 @@ export async function getSurveyReport() {
   } catch (error) {
     console.error("Failed to fetch survey report:", error);
     throw new Error("Failed to fetch survey report");
+  }
+}
+
+export async function getDoctorByBranch(branch: string) {
+  try {
+    const doctors = await prismaDb2.pC_Nhanvien.findMany({
+      where: {
+        Trangthai: "Đang_làm_việc",
+        ID_Chinhanh: branch,
+        OR: [{ ID_NhomNV: "BS" }, { id_DMPhongban: "KHTH" }],
+      },
+      select: {
+        ID_Nhanvien: true,
+        Hoten: true,
+      },
+    });
+
+    return doctors.map((doctor) => ({
+      value: doctor.ID_Nhanvien,
+      label: doctor.Hoten,
+    }));
+  } catch (error) {
+    console.error("Failed to fetch doctors by branch:", error);
+    throw new Error("Failed to fetch doctors by branch");
+  }
+}
+
+export async function getDepartmentsByBranch(branch: string) {
+  try {
+    const departments = await prismaDb1.department.findMany({
+      where: {
+        branchId: branch,
+      },
+      select: {
+        id: true,
+        name: true,
+      },
+    });
+
+    return departments.map((department) => ({
+      value: department.id,
+      label: department.name,
+    }));
+  } catch (error) {
+    console.error("Failed to fetch departments by branch:", error);
+    throw new Error("Failed to fetch departments by branch");
   }
 }

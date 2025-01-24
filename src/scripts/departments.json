@@ -1,0 +1,491 @@
+[
+  { "code": "BP_BP", "name": "BP. Buồng Phòng", "branchId": "00" },
+  {
+    "code": "CCTH_COVID",
+    "name": "Khoa CCTH Tiêu hao Covid-19",
+    "branchId": "00"
+  },
+  { "code": "CSKH", "name": "BP. CSKH", "branchId": "00" },
+  { "code": "DICHVU", "name": "Dịch Vụ Khác", "branchId": "00" },
+  { "code": "PHONG_TIEMNGUA", "name": "Phòng Tiêm Ngừa", "branchId": "00" },
+  {
+    "code": "PHONG_TIEMNGUA_DL",
+    "name": "Phòng Tiêm Ngừa Đa Liều",
+    "branchId": "00"
+  },
+  {
+    "code": "PHONG_TIEMNGUA_GOI",
+    "name": "Phòng Tiêm Ngừa Gói",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_CHUYENGIA_NHI",
+    "name": "P.06 PK CHUYÊN GIA (Nhi)",
+    "branchId": "00"
+  },
+  { "code": "PK_CK_LE", "name": "Phòng Khám Chuyên Khoa Lẻ", "branchId": "00" },
+  { "code": "PK_CLS_CT", "name": "Phòng CT", "branchId": "00" },
+  { "code": "PK_CLS_DIENTIM", "name": "Phòng Điện Tim", "branchId": "00" },
+  {
+    "code": "PK_CLS_DIENTIM_CCS",
+    "name": "Phòng Điện Tim - CCS",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_CLS_DIENTIM_CCTH",
+    "name": "Phòng Điện Tim - CCTH",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_CLS_DIENTIM_MTA",
+    "name": "Phòng Điện Tim MTA",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_CLS_DIENTIM_TTNT",
+    "name": "Phòng Điện Tim - TT Nội tiết",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_KHAMNHAT", "name": "Phòng CTG_KKN", "branchId": "00" },
+  {
+    "code": "PK_CLS_NOISOI_TIEUHOA",
+    "name": "Phòng Nội Soi",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA_DK5", "name": "Phòng SA ĐK Số 5", "branchId": "00" },
+  { "code": "PK_CLS_SA_DK6", "name": "Phòng SA ĐK Số 6", "branchId": "00" },
+  { "code": "PK_CLS_SA_DK7", "name": "Phòng SA ĐK Số 7", "branchId": "00" },
+  { "code": "PK_CLS_SA_IVF", "name": "Phòng Siêu Âm IVF", "branchId": "00" },
+  { "code": "PK_CLS_SA_MTA", "name": "Phòng Siêu Âm MTA", "branchId": "00" },
+  {
+    "code": "PK_CLS_SA_MTA_01",
+    "name": "Phòng Siêu Âm MTA 01",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA_NHI", "name": "Phòng Siêu Âm Nhi", "branchId": "00" },
+  { "code": "PK_CLS_SA_SO1", "name": "Phòng Siêu Âm Số 1", "branchId": "00" },
+  {
+    "code": "PK_CLS_SA_SO1_B",
+    "name": "Phòng Siêu Âm Số 1 Tầng B",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA_SO2", "name": "Phòng Siêu Âm Số 2", "branchId": "00" },
+  {
+    "code": "PK_CLS_SA_SO2_B",
+    "name": "Phòng Siêu Âm Số 2 Tầng B",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA_SO3", "name": "Phòng Siêu Âm Số 3", "branchId": "00" },
+  { "code": "PK_CLS_SA_SO4", "name": "Phòng Siêu Âm Số 4", "branchId": "00" },
+  { "code": "PK_CLS_SA_SO5", "name": "Phòng Siêu Âm Số 5", "branchId": "00" },
+  { "code": "PK_CLS_SA_SO6", "name": "Phòng Siêu Âm Số 6", "branchId": "00" },
+  { "code": "PK_CLS_SA_SO7", "name": "Phòng Siêu Âm Số 7", "branchId": "00" },
+  {
+    "code": "PK_CLS_SA_SO8",
+    "name": "Phòng Siêu Âm Tim Thai",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA_SPK12", "name": "Phòng SA SPK 12", "branchId": "00" },
+  {
+    "code": "PK_CLS_SA_VIP_NHAT",
+    "name": "Ph. Siêu âm VIP Nhật",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_SA1", "name": "Khoa CĐHA (Siêu âm)", "branchId": "00" },
+  { "code": "PK_CLS_SOI_DA", "name": "Phòng soi da", "branchId": "00" },
+  { "code": "PK_CLS_XETNGHIEM", "name": "Khoa Xét Nghiệm", "branchId": "00" },
+  {
+    "code": "PK_CLS_XETNGHIEM_IVF",
+    "name": "Phòng Xét Nghiệm IVF",
+    "branchId": "00"
+  },
+  { "code": "PK_CLS_XQUANG", "name": "Phòng X-Quang", "branchId": "00" },
+  { "code": "PK_DALIEU", "name": "P.15 (Khám Nhi)", "branchId": "00" },
+  {
+    "code": "PK_HAUMONTRUCTRANG",
+    "name": "Phòng Khám Hậu Môn Trực Tràng",
+    "branchId": "00"
+  },
+  { "code": "PK_HMR_01", "name": "PK HMR 01", "branchId": "00" },
+  { "code": "PK_IVF_PHONG_I", "name": "Phòng Khám IVF", "branchId": "00" },
+  { "code": "PK_KHHGD", "name": "PK SPK 08", "branchId": "00" },
+  { "code": "PK_KHU_KHAM_NHI", "name": "Phòng Khám Nhi", "branchId": "00" },
+  { "code": "PK_MTA_01", "name": "PK Mắt Tinh Anh 01", "branchId": "00" },
+  { "code": "PK_MTA_02", "name": "PK Mắt Tinh Anh 02", "branchId": "00" },
+  { "code": "PK_MTA_03", "name": "PK Mắt Tinh Anh 03", "branchId": "00" },
+  { "code": "PK_NAMKHOA", "name": "Phòng Khám Nam Khoa", "branchId": "00" },
+  { "code": "PK_NGOAI", "name": "PK Ngoại Tổng Quát 1", "branchId": "00" },
+  { "code": "PK_NGOAI_2", "name": "PK Ngoại Tổng Quát 2", "branchId": "00" },
+  {
+    "code": "PK_NGOAI_3",
+    "name": "PK Chuyên Gia Ngoại Tổng Quát",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NGOAI_CHANTHUONG",
+    "name": "PK Ngoại Chấn Thương",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NGOAI_CT_2",
+    "name": "PK NGoại Chấn Thương 2",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NGOAI_CT_3",
+    "name": "PK NGoại Chấn Thương 3",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NGOAI_LONGNGUC",
+    "name": "PK Ngoại Lồng Ngực Mạch Máu",
+    "branchId": "00"
+  },
+  { "code": "PK_NGOAI_NIEU", "name": "PK Ngoại Niệu", "branchId": "00" },
+  { "code": "PK_NGOAI_TONGQUAT", "name": "Phòng Khám Ngoại", "branchId": "00" },
+  { "code": "PK_NHI_1", "name": "P.19 (Khám Nhi) Nhiễm", "branchId": "00" },
+  { "code": "PK_NHI_10", "name": "P. 10 (Dinh Dưỡng)", "branchId": "00" },
+  {
+    "code": "PK_NHI_13",
+    "name": "P.13 (Hô Hấp - Miễn Dịch Dị Ứng) ",
+    "branchId": "00"
+  },
+  { "code": "PK_NHI_17", "name": "P.18 (Khám Nhi)", "branchId": "00" },
+  { "code": "PK_NHI_18", "name": "P.17 (Khám Nhi) Nhiễm", "branchId": "00" },
+  { "code": "PK_NHI_2", "name": "P. Khám Da Liễu", "branchId": "00" },
+  { "code": "PK_NHI_5", "name": "P.09 (Khám Nhi)", "branchId": "00" },
+  { "code": "PK_NHI_6", "name": "P.11 (Khám Ngoại Nhi)", "branchId": "00" },
+  { "code": "PK_NHI_7", "name": "P.06 (PK YÊU CẦU)", "branchId": "00" },
+  {
+    "code": "PK_NHI_CAPCUU",
+    "name": "Phòng Khám Cấp Cứu 1 (Khám Nhi)",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NHI_CAPCUU2",
+    "name": "Phòng Khám Cấp Cứu 2 (Khám Nhi)",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NHI_CAPCUU3",
+    "name": "P.19 (Khám Nhi) Cấp Cứu ",
+    "branchId": "00"
+  },
+  { "code": "PK_NHI_COVID1", "name": "PK Nhi Covid 1", "branchId": "00" },
+  { "code": "PK_NHI_COVID2", "name": "PK Nhi Covid 2", "branchId": "00" },
+  { "code": "PK_NHI_DINHKY", "name": "P. 09 (Khám Định Kỳ)", "branchId": "00" },
+  { "code": "PK_NHI_HEN_GIO", "name": "P.14 (Khám Nhi)", "branchId": "00" },
+  {
+    "code": "PK_NHI_TANGCUONG",
+    "name": "P. PK Nhi Tăng Cường",
+    "branchId": "00"
+  },
+  { "code": "PK_NHI_TMH1", "name": "P.12 (Khám Nhi)", "branchId": "00" },
+  {
+    "code": "PK_NHI_UUTIEN",
+    "name": "P.03 Phòng Khám Nhi (Ưu Tiên)",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NHIEM_COVID",
+    "name": "Phòng Khám Nhiễm (Covid)",
+    "branchId": "00"
+  },
+  { "code": "PK_NHU", "name": "PK SPK 11", "branchId": "00" },
+  {
+    "code": "PK_NOI",
+    "name": "PK Nội Tổng Quát - Hô Hấp - Lão Khoa",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_NOI_GANMATTUY",
+    "name": "PK Nội Gan Mật Tụy",
+    "branchId": "00"
+  },
+  { "code": "PK_NOI_TANGCUONG", "name": "PK Nội Tăng Cường", "branchId": "00" },
+  { "code": "PK_NOI_TM", "name": "PK Nội Tim Mạch", "branchId": "00" },
+  { "code": "PK_NOI_TM_2", "name": "PK Nội Tim Mạch 2", "branchId": "00" },
+  { "code": "PK_NOI_TONGQUAT", "name": "Phòng Khám Nội", "branchId": "00" },
+  {
+    "code": "PK_NOI_XUONGKHOP",
+    "name": "PK Nội Cơ Xương Khớp",
+    "branchId": "00"
+  },
+  { "code": "PK_NOISOI", "name": "PK Nội Tiêu Hóa", "branchId": "00" },
+  {
+    "code": "PK_NOITIET",
+    "name": "PK Nội Tiết - Tim Mạch 2",
+    "branchId": "00"
+  },
+  { "code": "PK_ONLINE", "name": "Phòng Khám Online", "branchId": "00" },
+  { "code": "PK_PHU", "name": "PK SPK 07", "branchId": "00" },
+  { "code": "PK_RHM", "name": "PK RHM", "branchId": "00" },
+  { "code": "PK_SAN", "name": "PK SPK 05", "branchId": "00" },
+  { "code": "PK_SAN_TIENSAN", "name": "Trung tâm Tiền Sản", "branchId": "00" },
+  { "code": "PK_SPK", "name": "PK Sản Phụ Khoa", "branchId": "00" },
+  { "code": "PK_SPK_1", "name": "PK SPK 01", "branchId": "00" },
+  { "code": "PK_SPK_10", "name": "PK SPK 10", "branchId": "00" },
+  { "code": "PK_SPK_12", "name": "PK SPK 12", "branchId": "00" },
+  { "code": "PK_SPK_13", "name": "PK SPK DINH DƯỠNG", "branchId": "00" },
+  { "code": "PK_SPK_2", "name": "PK SPK 02", "branchId": "00" },
+  { "code": "PK_SPK_4", "name": "PK SPK 04", "branchId": "00" },
+  { "code": "PK_SPK_9", "name": "PK SPK 09", "branchId": "00" },
+  {
+    "code": "PK_TIEMCHUNG_10",
+    "name": "P. Tư Vấn Tiêm Ngừa 03",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_TIEMCHUNG_11",
+    "name": "P. Tư Vấn Tiêm Ngừa 01",
+    "branchId": "00"
+  },
+  { "code": "PK_TIEMCHUNG_2", "name": "P. Tiêm Ngừa 06", "branchId": "00" },
+  { "code": "PK_TIEMCHUNG_3", "name": "P. Tiêm Ngừa 05", "branchId": "00" },
+  {
+    "code": "PK_TIEMCHUNG_5",
+    "name": "P. Tư Vấn Tiêm Ngừa 05",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_TIEMCHUNG_6",
+    "name": "P. Tư Vấn Tiêm Ngừa 06",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_TIEMCHUNG_7",
+    "name": "p. Tư Vấn Tiêm Ngừa 07",
+    "branchId": "00"
+  },
+  {
+    "code": "PK_TIEMCHUNG_8",
+    "name": "P. Tư Vấn Tiêm Ngừa 02",
+    "branchId": "00"
+  },
+  { "code": "PK_TIEMCHUNG_9", "name": "P. Tiêm Ngừa 04", "branchId": "00" },
+  {
+    "code": "PK_TIEMCHUNG_DK",
+    "name": "Phòng Tiêm Chủng (Người lớn)",
+    "branchId": "00"
+  },
+  { "code": "PK_TMH", "name": "PK TMH", "branchId": "00" },
+  { "code": "PK_TMH_2", "name": "PK TMH 02", "branchId": "00" },
+  { "code": "PK_TMH_3", "name": "PK TMH 03", "branchId": "00" },
+  { "code": "PK_TVTS", "name": "PK SPK 06", "branchId": "00" },
+  { "code": "PK_UNGBUU", "name": "PK Ung Bướu", "branchId": "00" },
+  {
+    "code": "PK-NGOAI_THANKINH",
+    "name": "PK Ngoại Thần Kinh",
+    "branchId": "00"
+  },
+  { "code": "TO_SL_COVID", "name": "Khu vực sàng lọc Covid", "branchId": "00" },
+  { "code": "TT_HMR", "name": "Trung Tâm HMR", "branchId": "00" },
+  { "code": "TT_MTA", "name": "Trung Tâm Mắt Tinh Anh", "branchId": "00" },
+  { "code": "TT_NOITIET", "name": "Trung Tâm Nội Tiết", "branchId": "00" },
+  { "code": "VIP_NHI_1", "name": "VIP - Nhi 01", "branchId": "00" },
+  { "code": "VIP_SPK1", "name": "VIP - Sản Phụ Khoa 1", "branchId": "00" },
+  { "code": "VIP_SPK2", "name": "VIP - Sản Phụ Khoa 2", "branchId": "00" },
+  { "code": "XN_COVID", "name": "Xét nghiệm Tiêu hao Covid-19" },
+  { "code": "BP_BP", "name": "BP.Buồng Phòng", "branchId": "02" },
+  { "code": "DICHVU", "name": "Dịch Vụ Khác", "branchId": "02" },
+  { "code": "PHONG_TIEMNGUA", "name": "Phòng Tiêm Ngừa", "branchId": "02" },
+  {
+    "code": "PHONG_TIEMNGUA_DL",
+    "name": "Phòng Tiêm Ngừa Đa Liều",
+    "branchId": "02"
+  },
+  {
+    "code": "PHONG_TIEMNGUA_GOI",
+    "name": "Phòng Tiêm Ngừa Gói",
+    "branchId": "02"
+  },
+  { "code": "PK_CK_LE", "name": "Phòng Khám Chuyên Khoa Lẻ", "branchId": "02" },
+  { "code": "PK_CLS_CT", "name": "Phòng CT", "branchId": "02" },
+  { "code": "PK_CLS_DIENTIM", "name": "Phòng Điện Tim", "branchId": "02" },
+  {
+    "code": "PK_CLS_NOISOI_TIEUHOA",
+    "name": "Phòng Nội Soi",
+    "branchId": "02"
+  },
+  { "code": "PK_CLS_SA_SO1", "name": "Phòng Siêu Âm Số 1", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO2", "name": "Phòng Siêu Âm Số 2", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO3", "name": "Phòng Siêu Âm Số 3", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO4", "name": "Phòng Siêu Âm Số 4", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO5", "name": "Phòng Siêu Âm Số 5", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO6", "name": "Phòng Siêu Âm Số 6", "branchId": "02" },
+  { "code": "PK_CLS_SA_SO7", "name": "Phòng Siêu Âm Số 7", "branchId": "02" },
+  { "code": "PK_CLS_SA1", "name": "Khoa CĐHA (Siêu âm)", "branchId": "02" },
+  { "code": "PK_CLS_XETNGHIEM", "name": "Khoa Xét Nghiệm", "branchId": "02" },
+  { "code": "PK_CLS_XQUANG", "name": "Phòng X-Quang", "branchId": "02" },
+  { "code": "PK_DALIEU", "name": "Phòng Khám Da Liễu", "branchId": "02" },
+  { "code": "PK_MAT_01", "name": "PK Mắt 01", "branchId": "02" },
+  { "code": "PK_NGOAI", "name": "Khu Khám Ngoại", "branchId": "02" },
+  { "code": "PK_NGOAI_01", "name": "PK Ngoại Tổng Quát 1", "branchId": "02" },
+  { "code": "PK_NGOAI_02", "name": "PK Ngoại Tổng Quát 2", "branchId": "02" },
+  { "code": "PK_NGOAI_03", "name": "PK Ngoại Chấn Thương", "branchId": "02" },
+  { "code": "PK_NGOAI_04", "name": "PK Ngoại 4", "branchId": "02" },
+  { "code": "PK_NGOAI_05", "name": "PK Ngoại 05", "branchId": "02" },
+  {
+    "code": "PK_NGOAI_06",
+    "name": "PK Ngoại Lồng Ngực Mạch Máu",
+    "branchId": "02"
+  },
+  { "code": "PK_NGOAI_07", "name": "PK Ngoại Niệu", "branchId": "02" },
+  { "code": "PK_NGOAI_08", "name": "PK Ngoại Ung Bướu", "branchId": "02" },
+  { "code": "PK_NHI", "name": "Khu Khám Nhi", "branchId": "02" },
+  { "code": "PK_NHI_1", "name": "P.01 Khám Nhi", "branchId": "02" },
+  { "code": "PK_NHI_10", "name": "Quay Thong Tin Nhi", "branchId": "02" },
+  { "code": "PK_NHI_2", "name": "P.02 Khám Nhi", "branchId": "02" },
+  { "code": "PK_NHI_3", "name": "P.03 Khám Nhi", "branchId": "02" },
+  { "code": "PK_NHI_4", "name": "P.04 Khám Dinh Dưỡng", "branchId": "02" },
+  { "code": "PK_NHI_5", "name": "P.05 Khám Nhi Nhiễm", "branchId": "02" },
+  { "code": "PK_NHI_6", "name": "P.06 Khám Nhi", "branchId": "02" },
+  {
+    "code": "PK_NHI_7",
+    "name": "P.07 Khám Nhi (CHUYEN GIA)",
+    "branchId": "02"
+  },
+  { "code": "PK_NHI_8", "name": "P.08 Khám Nhi Covid", "branchId": "02" },
+  { "code": "PK_NHI_9", "name": "P.09 Khám Ngoại Nhi", "branchId": "02" },
+  { "code": "PK_NHIEM", "name": "PK Nhiễm", "branchId": "02" },
+  { "code": "PK_NOI", "name": "Khu Khám Nội", "branchId": "02" },
+  { "code": "PK_NOI_01", "name": "PK Nội Tổng Quát 01", "branchId": "02" },
+  { "code": "PK_NOI_02", "name": "PK Nội Hô Hấp", "branchId": "02" },
+  { "code": "PK_NOI_03", "name": "PK Nội Tiết Tim Mạch ", "branchId": "02" },
+  { "code": "PK_NOI_04", "name": "PK Nội Tim Mạch 02", "branchId": "02" },
+  { "code": "PK_NOI_05", "name": "PK Nội Tiêu Hóa 01", "branchId": "02" },
+  { "code": "PK_NOI_06", "name": "PK Nội Tiêu Hóa 02", "branchId": "02" },
+  { "code": "PK_NOI_07", "name": "PK Nội Tiết", "branchId": "02" },
+  { "code": "PK_NOI_08", "name": "PK Nội Tổng Quát 08", "branchId": "02" },
+  { "code": "PK_NOI_09", "name": "PK Theo Yêu Cầu", "branchId": "02" },
+  { "code": "PK_NOI_10", "name": "PK Chuyên Gia", "branchId": "02" },
+  { "code": "PK_ONLINE", "name": "Phòng Khám Online", "branchId": "02" },
+  { "code": "PK_RHM_01", "name": "PK RHM 01", "branchId": "02" },
+  { "code": "PK_SPK", "name": "Khu Khám Sản Phụ Khoa", "branchId": "02" },
+  { "code": "PK_SPK_01", "name": "PK SPK 01", "branchId": "02" },
+  { "code": "PK_SPK_02", "name": "PK NHU (SPK 02)", "branchId": "02" },
+  { "code": "PK_SPK_03", "name": "PK SPK 03", "branchId": "02" },
+  { "code": "PK_SPK_04", "name": "PK SPK 04", "branchId": "02" },
+  { "code": "PK_SPK_05", "name": "PK SPK 05 (CHUYEN GIA)", "branchId": "02" },
+  { "code": "PK_SPK_06", "name": "PK SPK 06", "branchId": "02" },
+  { "code": "PK_SPK_07", "name": "PK SPK 07", "branchId": "02" },
+  { "code": "PK_SPK_08", "name": "Phòng Tiêm Ngừa Sản ", "branchId": "02" },
+  { "code": "PK_SPK_09", "name": "PK SPK 09", "branchId": "02" },
+  { "code": "PK_SPK_10", "name": "TT DIEU TRI TRONG NGAY", "branchId": "02" },
+  { "code": "PK_THAMMY", "name": "Phòng Tư Vấn Thẩm Mỹ", "branchId": "02" },
+  {
+    "code": "PK_TIEMCHUNG_1",
+    "name": "P. Tư Vấn Tiêm Ngừa 01",
+    "branchId": "02"
+  },
+  {
+    "code": "PK_TIEMCHUNG_2",
+    "name": "P. Tư Vấn Tiêm Ngừa 02",
+    "branchId": "02"
+  },
+  {
+    "code": "PK_TIEMCHUNG_3",
+    "name": "P. Tư Vấn Tiêm Ngừa 03",
+    "branchId": "02"
+  },
+  {
+    "code": "PK_TIEMCHUNG_4",
+    "name": "P. Tư Vấn Tiêm Ngừa 04",
+    "branchId": "02"
+  },
+  {
+    "code": "PK_TIEMCHUNG_5",
+    "name": "P. Tư Vấn Tiêm Ngừa 05",
+    "branchId": "02"
+  },
+  { "code": "PK_TIEMCHUNG_6", "name": "P. Khám Dinh Dưỡng", "branchId": "02" },
+  {
+    "code": "PK_TIEMCHUNG_7",
+    "name": "P. Tư Vấn Tiêm Ngừa 07",
+    "branchId": "02"
+  },
+  { "code": "PK_TMH_01", "name": "PK TMH 01", "branchId": "02" },
+  { "code": "PK_TMH_02", "name": "PK TMH 02", "branchId": "02" },
+  { "code": "DICHVU", "name": "Dịch Vụ Khác", "branchId": "01" },
+  { "code": "PHONG_TIEMNGUA", "name": "Phòng Tiêm Ngừa", "branchId": "01" },
+  {
+    "code": "PHONG_TIEMNGUA_GOI",
+    "name": "Phòng Tiêm Ngừa Gói",
+    "branchId": "01"
+  },
+  { "code": "PK_CK_LE", "name": "Phòng Khám Chuyên Khoa Lẻ", "branchId": "01" },
+  { "code": "PK_CLS_CT", "name": "Phòng CT", "branchId": "01" },
+  { "code": "PK_CLS_DIENTIM", "name": "Phòng Điện Tim", "branchId": "01" },
+  {
+    "code": "PK_CLS_NOISOI_TIEUHOA",
+    "name": "Phòng Nội Soi",
+    "branchId": "01"
+  },
+  { "code": "PK_CLS_SA1", "name": "Phòng Siêu Âm", "branchId": "01" },
+  { "code": "PK_CLS_XETNGHIEM", "name": "Khoa Xét Nghiệm", "branchId": "01" },
+  {
+    "code": "PK_CLS_XETNGHIEM_IVF",
+    "name": "Phòng Xét Nghiệm IVF",
+    "branchId": "01"
+  },
+  { "code": "PK_CLS_XQUANG", "name": "Phòng X-Quang", "branchId": "01" },
+  { "code": "PK_DALIEU", "name": "Phòng Khám Da Liễu", "branchId": "01" },
+  { "code": "PK_KHHGD", "name": "Phòng Khám KHHGĐ", "branchId": "01" },
+  { "code": "PK_KHU_KHAM_NHI", "name": "Phòng Khám Nhi", "branchId": "01" },
+  { "code": "PK_MAT", "name": "Phòng Khám Mắt", "branchId": "01" },
+  {
+    "code": "PK_NGOAI",
+    "name": "Phòng Khám Ngoại Tổng Hợp 01",
+    "branchId": "01"
+  },
+  {
+    "code": "PK_NGOAI_02",
+    "name": "Phòng Khám Ngoại Tổng Hợp 02",
+    "branchId": "01"
+  },
+  { "code": "PK_NGOAI_TONGQUAT", "name": "Phòng Khám Ngoại", "branchId": "01" },
+  { "code": "PK_NHI_1", "name": "PK Nhi 01", "branchId": "01" },
+  { "code": "PK_NHI_2", "name": "PK Nhi 02", "branchId": "01" },
+  { "code": "PK_NHI_3", "name": "PK Nhi 03", "branchId": "01" },
+  { "code": "PK_NHI_4", "name": "PK Nhi 04", "branchId": "01" },
+  { "code": "PK_NHI_5", "name": "PK Nhi 05", "branchId": "01" },
+  { "code": "PK_NHI_6", "name": "PK Nhi 06", "branchId": "01" },
+  { "code": "PK_NHI_7", "name": "PK Nhi 07", "branchId": "01" },
+  { "code": "PK_NHI_8", "name": "PK Nhi 08", "branchId": "01" },
+  { "code": "PK_NHU", "name": "Phòng Khám Nhũ", "branchId": "01" },
+  { "code": "PK_NOI", "name": "Phòng Khám Nội Tổng Hợp 01", "branchId": "01" },
+  {
+    "code": "PK_NOI_02",
+    "name": "Phòng Khám Nội Tổng hợp 02",
+    "branchId": "01"
+  },
+  {
+    "code": "PK_NOI_03",
+    "name": "Phòng Khám Nội Tổng Hợp 03",
+    "branchId": "01"
+  },
+  {
+    "code": "PK_NOI_04",
+    "name": "Phòng Khám Nội Tổng Hợp 04",
+    "branchId": "01"
+  },
+  {
+    "code": "PK_NOI_05",
+    "name": "Phòng Khám Nội Tổng Hợp 05",
+    "branchId": "01"
+  },
+  {
+    "code": "PK_NOI_06",
+    "name": "Phòng Khám Nội Tổng Hợp 06",
+    "branchId": "01"
+  },
+  { "code": "PK_NOI_TONGQUAT", "name": "Phòng Khám Nội", "branchId": "01" },
+  { "code": "PK_ONLINE", "name": "Phòng Khám Online", "branchId": "01" },
+  { "code": "PK_PHU", "name": "Phòng Khám Phụ", "branchId": "01" },
+  { "code": "PK_RHM", "name": "Phòng Khám RHM", "branchId": "01" },
+  { "code": "PK_SAN", "name": "Phòng Khám Sản", "branchId": "01" },
+  { "code": "PK_SPK", "name": "PK Sản Phụ Khoa", "branchId": "01" },
+  { "code": "PK_TIEMCHUNG", "name": "PK Tiêm Chủng 02", "branchId": "01" },
+  { "code": "PK_TIEMCHUNG_2", "name": "PK Tiêm Chủng 01", "branchId": "01" },
+  { "code": "PK_TMH", "name": "Phòng Khám TMH", "branchId": "01" }
+]

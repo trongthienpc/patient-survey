@@ -1,12 +1,13 @@
 // Prisma Client generator for interacting with the database
 generator client {
   provider = "prisma-client-js"
+  output   = "./generated/db1"
 }
 
 // PostgreSQL as the data source
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL_1")
 }
 
 // Main Survey model that captures overall survey data 
@@ -80,6 +81,10 @@ model Doctor {
 // Department model representing hospital departments associated with surveys
 model Department {
   id            String          @id @default(cuid()) // Unique ID for each department
+  code          String // Code of the department
   name          String // Name of the department
+  branchId      String? // Optional field for branch ID
   SurveySection SurveySection[]
+
+  @@unique([code, branchId])
 }

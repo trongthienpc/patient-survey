@@ -2,7 +2,7 @@
 
 import SatisfactionRating from "@/components/SatisfactionRating";
 import MultipleChoiceQuestion from "@/components/MultipleChoiceQuestion";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ThankYouPage from "@/app/thank-you/page";
 import {
@@ -18,9 +18,11 @@ import {
 import BoxReveal from "./magic-ui/box-reveal";
 import { Answers, SurveyAnswer } from "@/types";
 import { toast } from "sonner";
-import Actor from "./Actor";
 import AnimatedCheckbox from "./AnimatedCheckbox";
 import Image from "next/image";
+import Doctors from "./Doctors";
+import Departments from "./Departments";
+import Branches from "./Branches";
 
 export const dynamic = "force-dynamic";
 
@@ -37,6 +39,39 @@ const SurveyForm = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [answers, setAnswers] = useState<Answers>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedBranch, setSelectedBranch] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("selectedBranch");
+      return saved ? JSON.parse(saved).value : "";
+    }
+    return "";
+  });
+
+  const [selectedDepartment, setSelectedDepartment] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("selectedDepartment");
+      return saved ? JSON.parse(saved).value : "";
+    }
+    return "";
+  });
+
+  const [selectedDoctor, setSelectedDoctor] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("selectedDoctor");
+      return saved ? JSON.parse(saved).value : "";
+    }
+    return "";
+  });
+
+  useEffect(() => {
+    return () => {
+      if (isSubmitted) {
+        localStorage.removeItem("selectedBranch");
+        localStorage.removeItem("selectedDepartment");
+        localStorage.removeItem("selectedDoctor");
+      }
+    };
+  }, [isSubmitted]);
 
   const handleSectionToggle = useCallback((sectionId: string) => {
     setSelectedSections((prev) =>
@@ -131,11 +166,25 @@ const SurveyForm = () => {
     if (currentQuestionIndex === 0) {
       return (
         <div className="overflow-scroll max-h-[720px] flex flex-col gap-9">
-          <Actor
+          {/* <Actor
             initialAnswer={currentAnswer?.room || []}
             onAnswerChange={(room: string[] | undefined) =>
               handleAnswerChange(questionId, { room })
             }
+          /> */}
+          <Branches
+            setSelectedBranch={setSelectedBranch}
+            selectedBranch={selectedBranch}
+          />
+          <Departments
+            id={selectedBranch}
+            setSelectedDepartment={setSelectedDepartment}
+            selectedDepartment={selectedDepartment}
+          />
+          <Doctors
+            id={selectedBranch}
+            setSelectedDoctor={setSelectedDoctor}
+            selectedDoctor={selectedDoctor}
           />
           <SatisfactionRating
             key="satisfaction"
