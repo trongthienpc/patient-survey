@@ -165,7 +165,7 @@ const SurveyForm = () => {
 
     if (currentQuestionIndex === 0) {
       return (
-        <div className="overflow-scroll max-h-[720px] flex flex-col gap-9">
+        <div className="max-h-[720px] flex flex-col gap-9">
           {/* <Actor
             initialAnswer={currentAnswer?.room || []}
             onAnswerChange={(room: string[] | undefined) =>
@@ -225,7 +225,7 @@ const SurveyForm = () => {
   };
 
   return (
-    <div className="select-none border border-dashed rounded-xl border-teal-500 grid grid-cols-3 h-full">
+    <div className="select-none border border-dashed rounded-xl border-teal-500 grid grid-cols-3 h-full ">
       <div className="col-span-2">
         <CardContent className="bg-gray-100  h-auto rounded-tl-xl rounded-bl-xl p-6">
           {!isStarted && (

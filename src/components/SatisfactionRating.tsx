@@ -64,7 +64,7 @@ const SatisfactionRating = ({
   };
 
   return (
-    <div className="w-full overflow-scroll">
+    <div className="w-full">
       <h2 className="font-bold text-2xl mb-6 text-violet-500">{question}</h2>{" "}
       <div className="grid grid-cols-5 gap-6">
         {ratings.map(({ level, animationData, label }) => (

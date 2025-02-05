@@ -21,3 +21,6 @@ v.1.0.3 - 20250205
     M  prisma/doctors/generated/db2/package.json
     M  prisma/doctors/generated/db2/schema.prisma
     M  prisma/doctors/schema.prisma
+    M  src/app/layout.tsx
+    M  src/components/SatisfactionRating.tsx
+    M  src/components/SurveyForm.tsx    
