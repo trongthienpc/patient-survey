@@ -8,3 +8,16 @@ v.1.0.1 - 20250205
     A  versions.txt
     M  src/app/layout.tsx
     D  src/version.txt
+
+v.1.0.2
+
+v.1.0.3 - 20250205
+    M  Dockerfile
+    M  next.config.ts
+    M  prisma/doctors/.next/trace
+    M  prisma/doctors/generated/db2/edge.js
+    M  prisma/doctors/generated/db2/index.js
+    A  prisma/doctors/generated/db2/libquery_engine-debian-openssl-1.1.x.so.node
+    M  prisma/doctors/generated/db2/package.json
+    M  prisma/doctors/generated/db2/schema.prisma
+    M  prisma/doctors/schema.prisma

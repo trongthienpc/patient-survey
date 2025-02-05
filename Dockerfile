@@ -17,7 +17,8 @@ COPY . .
 # Chạy lệnh để sinh mã Prisma nếu có
 COPY prisma prisma
 COPY .env .env
-RUN bun run prisma generate
+RUN bun run prisma generate --schema=prisma/schema.prisma
+RUN bun run prisma generate --schema=prisma/doctors/schema.prisma
 
 # Chạy lệnh để xây dựng ứng dụng
 RUN bun run build
@@ -36,6 +37,7 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /usr/src/app/public ./public
 COPY --from=builder /usr/src/app/.next/standalone ./
 COPY --from=builder /usr/src/app/.next/static ./.next/static
+COPY --from=builder /usr/src/app/prisma ./prisma 
 
 # Thay đổi quyền cho các thư mục cần thiết
 RUN mkdir -p .next
