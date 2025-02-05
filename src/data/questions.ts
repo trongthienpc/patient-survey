@@ -23,8 +23,7 @@ export const satisfiedWithExamination = [
   },
   {
     key: 3,
-    value:
-      "BS nắm bắt rất tốt tâm lý KH/ Bs đồng cảm, thấu hiểu cảm xúc của KH",
+    value: "Bs đồng cảm, thấu hiểu cảm xúc của KH",
     iconPath: Hearth,
   },
   {
@@ -52,7 +51,7 @@ export const satisfiedWithUltrasound = [
   },
   {
     key: 2,
-    value: "BS tư vấn đầy đủ, rõ ràng",
+    value: "BS siêu âm kỹ, giải thích rõ",
     iconPath: Thinking,
   },
   {
@@ -77,35 +76,63 @@ export const satisfiedWithUltrasound = [
   },
 ];
 
+export const satisfiedWithServiceCare = [
+  {
+    key: 1,
+    value: "Tác phong nhanh nhẹn, chính xác",
+    iconPath: Hugging,
+  },
+  {
+    key: 2,
+    value: "Tư vấn tận tình, dễ hiểu",
+    iconPath: Thinking,
+  },
+  {
+    key: 3,
+    value: "Thái độ vui vẻ, thân thiện",
+    iconPath: Hearth,
+  },
+  {
+    key: 4,
+    value: "Hướng dẫn chu đáo, nhiệt tình",
+    iconPath: Like,
+  },
+  {
+    key: 5,
+    value: "Diện mạo chỉn chu, chuyên nghiệp",
+    iconPath: Exp,
+  },
+  {
+    key: 6,
+    value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+
 export const dissatisfiedWithExamination = [
   {
     key: 1,
-    value:
-      "BS thờ ơ, không quan tâm/ Bs cần nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi",
+    value: "Bs cần nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi",
     iconPath: Unamused,
   },
   {
     key: 2,
-    value:
-      "BS không vui vẻ, khó chịu/ BS cần vui vẻ, thân thiện với tôi và người đi cùng",
+    value: "BS cần vui vẻ, thân thiện với tôi và người đi cùng",
     iconPath: Angry,
   },
   {
     key: 3,
-    value:
-      "BS tư vấn không đầy đủ/ Mong muốn Bs tư vấn và giải thích nhiều hơn cho tôi",
+    value: "Mong muốn Bs tư vấn và giải thích nhiều hơn cho tôi",
     iconPath: Thinking,
   },
   {
     key: 4,
-    value:
-      "BS chưa tạo được tin tưởng/ Bs cần tạo thêm sự tin tưởng cho tôi và gia đình",
+    value: "Bs cần tạo thêm sự tin tưởng cho tôi và gia đình",
     iconPath: Rolling,
   },
   {
     key: 5,
-    value:
-      "BS khám qua loa/ Bs cần khám kỹ và dành thời gian nhiều hơn cho tôi",
+    value: "Bs cần khám kỹ và dành thời gian nhiều hơn cho tôi",
     iconPath: Broken,
   },
   {
@@ -118,32 +145,66 @@ export const dissatisfiedWithExamination = [
 export const dissatisfiedWithUltrasound = [
   {
     key: 1,
-    value: "Bác sĩ thờ ơ, không quan tâm",
+    value: "Bs cần nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi",
     iconPath: Unamused,
   },
   {
     key: 2,
-    value: "Bác sĩ không vui vẻ, khó chịu",
+    value: "BS cần vui vẻ, thân thiện hơn với tôi",
     iconPath: Angry,
   },
   {
     key: 3,
-    value: "Bác sĩ không chủ động tương tác",
+    value: "Bs cần chủ động tương tác nhiều hơn với tôi",
     iconPath: Thinking,
   },
   {
     key: 4,
-    value: "Bác sĩ không hỗ trợ khi gặp khó khăn",
+    value: "Mong muốn Bs nhiệt tình hỗ trợ, khi KH gặp khó khăn",
     iconPath: Rolling,
   },
   {
     key: 5,
-    value: "Bác sĩ siêu âm qua loa",
+    value: "Mong muốn Bs siêu âm và dành thời gian nhiều hơn cho tôi",
     iconPath: Broken,
   },
   {
     key: 6,
     value: "Ý kiến khác",
+    iconPath: Pencil,
+  },
+];
+
+export const dissatisfiedWithServiceCare = [
+  {
+    key: 1,
+    value:
+      "Cần NV nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi và người đi cùng",
+    iconPath: Unamused,
+  },
+  {
+    key: 2,
+    value: "Cần NV vui vẻ, thân thiện và nhiệt tình hơn với tôi",
+    iconPath: Angry,
+  },
+  {
+    key: 3,
+    value: "Cần NV tư vấn dễ hiểu hơn",
+    iconPath: Thinking,
+  },
+  {
+    key: 4,
+    value: "Cần NV hướng dẫn tận tâm hơn",
+    iconPath: Rolling,
+  },
+  {
+    key: 5,
+    value: "Mong muốn NV có tác phong chuyên nghiệp hơn",
+    iconPath: Broken,
+  },
+  {
+    key: 6,
+    value: "Cần NV tập trung hơn vào KH và người đi cùng",
     iconPath: Pencil,
   },
 ];
