@@ -6,3 +6,5 @@ v.1.0.1 - 20250205
     A  Dockerfile
     M  next.config.ts
     A  versions.txt
+    M  src/app/layout.tsx
+    D  src/version.txt
