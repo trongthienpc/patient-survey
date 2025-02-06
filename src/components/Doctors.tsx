@@ -14,11 +14,13 @@ type DoctorsProps = {
   id: string;
   setSelectedDoctor: (doctor: string) => void;
   selectedDoctor: string;
+  section: string;
 };
 const Doctors: React.FC<DoctorsProps> = ({
   id,
   selectedDoctor,
   setSelectedDoctor,
+  section,
 }) => {
   const [selectedOption, setSelectedOption] = useState<DoctorType | null>(
     () => {
@@ -28,9 +30,9 @@ const Doctors: React.FC<DoctorsProps> = ({
   );
 
   const { error, isError, isLoading, data } = useQuery({
-    queryKey: ["doctors", id],
+    queryKey: ["doctors", id, section],
     queryFn: async () => {
-      const doctors = await getDoctorByBranch(id);
+      const doctors = await getDoctorByBranch(id, section);
       return doctors.map((doctor: { value: string; label: string | null }) => ({
         ...doctor,
         label: doctor.label || "",
@@ -68,7 +70,9 @@ const Doctors: React.FC<DoctorsProps> = ({
     <div>
       <div className="mb-3">
         <Label className="text-2xl text-violet-500 font-semibold">
-          Vui lòng chọn Bác sĩ thực hiện
+          Vui lòng chọn{" "}
+          {section === "Nhân viên CSKH" ? "nhân viên " : "bác sĩ "}
+          thực hiện
         </Label>
       </div>
       <div>
@@ -79,6 +83,7 @@ const Doctors: React.FC<DoctorsProps> = ({
             options={data}
           />
         )}
+        {data && data?.length == 0 && <div>Không có dữ liệu</div>}
       </div>
     </div>
   );

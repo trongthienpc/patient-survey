@@ -176,19 +176,61 @@ export async function getSurveyReport() {
   }
 }
 
-export async function getDoctorByBranch(branch: string) {
+export async function getDoctorByBranch(branch: string, section: string) {
+  console.log("🚀 ~ getDoctorByBranch ~ section:", section);
+  let doctors = [];
   try {
-    const doctors = await prismaDb2.pC_Nhanvien.findMany({
-      where: {
-        Trangthai: "Đang_làm_việc",
-        ID_Chinhanh: branch,
-        OR: [{ ID_NhomNV: "BS" }, { id_DMPhongban: "KHTH" }],
-      },
-      select: {
-        ID_Nhanvien: true,
-        Hoten: true,
-      },
-    });
+    if (section === "Nhân viên CSKH") {
+      doctors = await prismaDb2.pC_Nhanvien.findMany({
+        where: {
+          Trangthai: "Đang_làm_việc",
+          ID_Chinhanh: branch,
+          OR: [
+            { id_DMPhongban: "CSKH" },
+            { id_DMPhongban: "CSKHMKT" },
+            { id_DMPhongban: "MARKETING" },
+          ],
+        },
+        select: {
+          ID_Nhanvien: true,
+          Hoten: true,
+          id_DMPhongban: true,
+        },
+      });
+    } else {
+      if (section === "Bác sĩ khám") {
+        doctors = await prismaDb2.pC_Nhanvien.findMany({
+          where: {
+            Trangthai: "Đang_làm_việc",
+            ID_Chinhanh: branch,
+            OR: [{ ID_NhomNV: "BS" }],
+          },
+          select: {
+            ID_Nhanvien: true,
+            Hoten: true,
+            id_DMPhongban: true,
+          },
+        });
+      } else {
+        doctors = await prismaDb2.pC_Nhanvien.findMany({
+          where: {
+            Trangthai: "Đang_làm_việc",
+            ID_Chinhanh: branch,
+            OR: [
+              { ID_NhomNV: "BS" },
+              { id_DMPhongban: "CSKH" },
+              { id_DMPhongban: "CSKHMKT" },
+              { id_DMPhongban: "MARKETING" },
+            ],
+          },
+          select: {
+            ID_Nhanvien: true,
+            Hoten: true,
+            id_DMPhongban: true,
+          },
+        });
+      }
+    }
 
     return doctors.map((doctor) => ({
       value: doctor.ID_Nhanvien,

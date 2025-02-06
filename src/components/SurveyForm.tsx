@@ -164,7 +164,6 @@ const SurveyForm = () => {
     if (!selectedSections[currentSectionIndex]) return null;
 
     const section = selectedSections[currentSectionIndex];
-    console.log("🚀 ~ renderQuestion ~ section:", section);
     const questionId = `${section}-${currentQuestionIndex}`;
     const currentAnswer = answers[questionId];
 
@@ -190,6 +189,7 @@ const SurveyForm = () => {
             id={selectedBranch}
             setSelectedDoctor={setSelectedDoctor}
             selectedDoctor={selectedDoctor}
+            section={section}
           />
           <SatisfactionRating
             key="satisfaction"
@@ -203,9 +203,11 @@ const SurveyForm = () => {
       );
     }
 
-    const showDissatisfied = ["very_dissatisfied", "dissatisfied"].includes(
-      answers[`${section}-0`]?.rating || ""
-    );
+    const showDissatisfied = [
+      "very_dissatisfied",
+      "dissatisfied",
+      "neutral",
+    ].includes(answers[`${section}-0`]?.rating || "");
 
     return (
       <MultipleChoiceQuestion
@@ -343,6 +345,7 @@ const SurveyForm = () => {
           fill
           className="object-cover rounded-tr-xl rounded-br-xl transition-all ease-in-out duration-500"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
     </div>
