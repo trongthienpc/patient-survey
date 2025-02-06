@@ -13,7 +13,11 @@ import {
 } from "@/components/ui/card";
 import {
   dissatisfiedWithExamination,
+  dissatisfiedWithServiceCare,
+  dissatisfiedWithUltrasound,
   satisfiedWithExamination,
+  satisfiedWithServiceCare,
+  satisfiedWithUltrasound,
 } from "@/data/questions";
 import BoxReveal from "./magic-ui/box-reveal";
 import { Answers, SurveyAnswer } from "@/types";
@@ -160,6 +164,7 @@ const SurveyForm = () => {
     if (!selectedSections[currentSectionIndex]) return null;
 
     const section = selectedSections[currentSectionIndex];
+    console.log("🚀 ~ renderQuestion ~ section:", section);
     const questionId = `${section}-${currentQuestionIndex}`;
     const currentAnswer = answers[questionId];
 
@@ -213,8 +218,16 @@ const SurveyForm = () => {
         }
         options={
           showDissatisfied
-            ? dissatisfiedWithExamination
-            : satisfiedWithExamination
+            ? section === "Bác sĩ khám"
+              ? dissatisfiedWithExamination
+              : section === "Bác sĩ siêu âm"
+              ? dissatisfiedWithUltrasound
+              : dissatisfiedWithServiceCare
+            : section === "Bác sĩ khám"
+            ? satisfiedWithExamination
+            : section === "Bác sĩ siêu âm"
+            ? satisfiedWithUltrasound
+            : satisfiedWithServiceCare
         }
         initialAnswer={currentAnswer?.selectedOptions}
         onAnswerChange={({ selectedOptions, feedback }) =>
