@@ -215,8 +215,14 @@ const SurveyForm = () => {
         id={showDissatisfied ? "dissatisfied" : "satisfied"}
         question={
           showDissatisfied
-            ? "Bạn không hài lòng điều gì về nhân viên vừa rồi?"
-            : "Bạn hài lòng điều gì về nhân viên vừa rồi?"
+            ? "Bạn có thể chia sẻ thêm cảm nhận của bạn về những ý kiến trên (có thể chọn nhiều câu trả lời)"
+            : `Bạn hài lòng về điều gì ở ${
+                section === "Bác sĩ khám"
+                  ? "bác sĩ vừa thăm khám"
+                  : section === "Bác sĩ siêu âm"
+                  ? "bác sĩ vừa siêu âm"
+                  : "Nhân viên CSKH"
+              }  (có thể chọn nhiều câu trả lời)`
         }
         options={
           showDissatisfied
