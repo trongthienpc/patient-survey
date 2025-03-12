@@ -5,6 +5,7 @@ import "./globals.css";
 import QueryProvider from "@/providers/QueryProvider";
 import { Toaster } from "sonner";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { SelectionProvider } from "@/providers/SelectionContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,14 +40,16 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <QueryProvider>
-          <div className="w-full h-screen relative bg-amber-300" style={{}}>
-            <BackgroundGradientAnimation />
-            <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-              <div className="max-w-7xl max-h-screen  px-6">{children}</div>
+        <SelectionProvider>
+          <QueryProvider>
+            <div className="w-full h-screen relative bg-amber-300" style={{}}>
+              <BackgroundGradientAnimation />
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                <div className="max-w-7xl max-h-screen  px-6">{children}</div>
+              </div>
             </div>
-          </div>
-        </QueryProvider>
+          </QueryProvider>
+        </SelectionProvider>
         <Toaster richColors position="top-center" duration={3000} closeButton />
       </body>
     </html>

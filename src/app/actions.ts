@@ -1,22 +1,13 @@
 "use server";
 
 import { prismaDb1, prismaDb2 } from "@/lib/db";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, unstable_cache } from "next/cache";
 
-export async function submitSurvey(
-  prevState: { message: string },
-  formData: FormData
-) {
+export async function submitSurvey(prevState: { message: string }, formData: FormData) {
   try {
-    const doctorExaminationData = JSON.parse(
-      formData.get("Doctor Examination") as string
-    );
-    const doctorUltrasoundData = JSON.parse(
-      formData.get("Doctor Ultrasound") as string
-    );
-    const customerCareData = JSON.parse(
-      formData.get("Customer Care") as string
-    );
+    const doctorExaminationData = JSON.parse(formData.get("Doctor Examination") as string);
+    const doctorUltrasoundData = JSON.parse(formData.get("Doctor Ultrasound") as string);
+    const customerCareData = JSON.parse(formData.get("Customer Care") as string);
 
     await prismaDb1.survey.create({
       data: {
@@ -26,14 +17,10 @@ export async function submitSurvey(
             satisfaction: doctorExaminationData.satisfaction,
             feedback: doctorExaminationData.feedback,
             dissatisfied: {
-              create: doctorExaminationData.dissatisfied.map(
-                (content: string) => ({ content })
-              ),
+              create: doctorExaminationData.dissatisfied.map((content: string) => ({ content })),
             },
             satisfied: {
-              create: doctorExaminationData.satisfied.map(
-                (content: string) => ({ content })
-              ),
+              create: doctorExaminationData.satisfied.map((content: string) => ({ content })),
             },
           },
         },
@@ -43,9 +30,7 @@ export async function submitSurvey(
             satisfaction: doctorUltrasoundData.satisfaction,
             feedback: doctorUltrasoundData.feedback,
             dissatisfied: {
-              create: doctorUltrasoundData.dissatisfied.map(
-                (content: string) => ({ content })
-              ),
+              create: doctorUltrasoundData.dissatisfied.map((content: string) => ({ content })),
             },
             satisfied: {
               create: doctorUltrasoundData.satisfied.map((content: string) => ({
@@ -120,10 +105,7 @@ export async function getSurveyReport() {
       name: doctor.name,
       surveyed: doctor.SurveySection.length,
       averageRating:
-        doctor.SurveySection.reduce(
-          (sum, section) => sum + section.satisfaction,
-          0
-        ) / doctor.SurveySection.length || 0,
+        doctor.SurveySection.reduce((sum, section) => sum + section.satisfaction, 0) / doctor.SurveySection.length || 0,
     }));
 
     const processedDepartmentStats = departmentStats.map((department) => ({
@@ -131,10 +113,8 @@ export async function getSurveyReport() {
       name: department.name,
       surveyed: department.SurveySection.length,
       averageRating:
-        department.SurveySection.reduce(
-          (sum, section) => sum + section.satisfaction,
-          0
-        ) / department.SurveySection.length || 0,
+        department.SurveySection.reduce((sum, section) => sum + section.satisfaction, 0) /
+          department.SurveySection.length || 0,
     }));
 
     const processedSatisfactionStats = {
@@ -156,15 +136,11 @@ export async function getSurveyReport() {
       doctorStats: processedDoctorStats,
       departmentStats: processedDepartmentStats,
       satisfactionStats: {
-        positiveAspects: Object.entries(
-          processedSatisfactionStats.positiveAspects
-        ).map(([aspect, count]) => ({
+        positiveAspects: Object.entries(processedSatisfactionStats.positiveAspects).map(([aspect, count]) => ({
           aspect,
           frequency: `${count}/${satisfactionStats.length}`,
         })),
-        negativeAspects: Object.entries(
-          processedSatisfactionStats.negativeAspects
-        ).map(([aspect, count]) => ({
+        negativeAspects: Object.entries(processedSatisfactionStats.negativeAspects).map(([aspect, count]) => ({
           aspect,
           frequency: `${count}/${satisfactionStats.length}`,
         })),
@@ -185,11 +161,7 @@ export async function getDoctorByBranch(branch: string, section: string) {
         where: {
           Trangthai: "Đang_làm_việc",
           ID_Chinhanh: branch,
-          OR: [
-            { id_DMPhongban: "CSKH" },
-            { id_DMPhongban: "CSKHMKT" },
-            { id_DMPhongban: "MARKETING" },
-          ],
+          OR: [{ id_DMPhongban: "CSKH" }, { id_DMPhongban: "CSKHMKT" }, { id_DMPhongban: "MARKETING" }],
         },
         select: {
           ID_Nhanvien: true,
@@ -242,24 +214,64 @@ export async function getDoctorByBranch(branch: string, section: string) {
   }
 }
 
-export async function getDepartmentsByBranch(branch: string) {
-  try {
-    const departments = await prismaDb1.department.findMany({
-      where: {
-        branchId: branch,
-      },
-      select: {
-        id: true,
-        name: true,
-      },
-    });
+export const getDoctorByBranchNoSection = unstable_cache(
+  async (branch: string) => {
+    if (!branch) return [];
 
-    return departments.map((department) => ({
-      value: department.id,
-      label: department.name,
-    }));
-  } catch (error) {
-    console.error("Failed to fetch departments by branch:", error);
-    throw new Error("Failed to fetch departments by branch");
-  }
-}
+    try {
+      const doctors = await prismaDb2.pC_Nhanvien.findMany({
+        where: {
+          Trangthai: "Đang_làm_việc",
+          ID_Chinhanh: branch,
+          OR: [
+            { ID_NhomNV: "BS" },
+            { id_DMPhongban: "CSKH" },
+            { id_DMPhongban: "CSKHMKT" },
+            { id_DMPhongban: "MARKETING" },
+          ],
+        },
+        select: {
+          ID_Nhanvien: true,
+          Hoten: true,
+          id_DMPhongban: true,
+        },
+      });
+
+      return doctors.map((doctor) => ({
+        value: doctor.ID_Nhanvien,
+        label: doctor.Hoten,
+      }));
+    } catch (error) {
+      console.error("Failed to fetch doctors by branch:", error);
+      throw new Error("Failed to fetch doctors by branch");
+    }
+  },
+  ["getDoctorsByBranch"], // Cache key
+  { revalidate: 60 * 60 } // Cache trong 1 giờ
+);
+
+export const getDepartmentsByBranch = unstable_cache(
+  async (branch: string) => {
+    try {
+      const departments = await prismaDb1.department.findMany({
+        where: {
+          branchId: branch,
+        },
+        select: {
+          id: true,
+          name: true,
+        },
+      });
+
+      return departments.map((department) => ({
+        value: department.id,
+        label: department.name,
+      }));
+    } catch (error) {
+      console.error("Failed to fetch departments by branch:", error);
+      throw new Error("Failed to fetch departments by branch");
+    }
+  },
+  [""],
+  { revalidate: 60 * 60 }
+);

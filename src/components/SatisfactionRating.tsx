@@ -19,11 +19,7 @@ interface Rating {
   label: string;
 }
 
-const SatisfactionRating = ({
-  question,
-  onAnswerChange,
-  initialAnswer,
-}: SatisfactionRatingProps) => {
+const SatisfactionRating = ({ question, onAnswerChange, initialAnswer }: SatisfactionRatingProps) => {
   const [rating, setRating] = useState<string | undefined>(undefined);
 
   useEffect(() => {
@@ -64,23 +60,19 @@ const SatisfactionRating = ({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-[350px]">
       <h2 className="font-bold text-2xl mb-6 text-violet-500">{question}</h2>{" "}
       <div className="grid grid-cols-5 gap-6">
         {ratings.map(({ level, animationData, label }) => (
           <button
             key={level}
-            className={`p-2 rounded-lg flex flex-col items-center ${
-              rating === level ? "bg-gray-200" : ""
-            }`}
+            className={`p-2 rounded-lg flex flex-col items-center ${rating === level ? "bg-gray-200" : ""}`}
             onClick={() => handleRatingChange(level)}
           >
             <div>
               <Lottie animationData={animationData} style={{ width: 80 }} />
             </div>
-            <div className="text-center mt-3 text-xl font-semibold">
-              {label}
-            </div>{" "}
+            <div className="text-center mt-3 text-xl font-semibold">{label}</div>{" "}
           </button>
         ))}
       </div>

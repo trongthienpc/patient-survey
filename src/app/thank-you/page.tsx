@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import Party from "@/data/animations/party.json";
+import { Button } from "@/components/ui/button";
 const ThankYouPage = () => {
   const [countdown, setCountdown] = useState(100); // Start countdown from 5 seconds
 
@@ -64,6 +65,9 @@ const ThankYouPage = () => {
           </span>{" "}
           giây.
         </p>
+      </div>
+      <div>
+        <Button onClick={() => window.location.reload()}>Khảo sát mới</Button>
       </div>
     </div>
   );

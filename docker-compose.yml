@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: bun_app
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - db
+    ports:
+      - "3524:3000"
+    networks:
+      - app_network
+
+  db:
+    image: postgres:16
+    container_name: bun_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bun_user
+      POSTGRES_PASSWORD: bun_password
+      POSTGRES_DB: bun_database
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app_network
+
+volumes:
+  db_data:
+
+networks:
+  app_network:
+    driver: bridge

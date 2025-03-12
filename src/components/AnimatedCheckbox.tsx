@@ -9,18 +9,11 @@ interface AnimatedCheckboxProps {
   handleSectionToggle: (sectionId: string) => void;
 }
 
-export default function AnimatedCheckbox({
-  section,
-  selectedSections,
-  handleSectionToggle,
-}: AnimatedCheckboxProps) {
+export default function AnimatedCheckbox({ section, selectedSections, handleSectionToggle }: AnimatedCheckboxProps) {
   const isChecked = selectedSections.includes(section.id);
 
   return (
-    <div
-      className="h-full flex items-center space-x-4 select-none cursor-pointer"
-      key={section.id}
-    >
+    <div className="h-full flex items-center space-x-4 select-none cursor-pointer" key={section.id}>
       {/* Checkbox Icon (motion div để làm hoạt hình) */}
       <motion.div
         className={`relative w-10 h-10 flex items-center justify-center border-2 rounded-md transition-all duration-300 ${
@@ -48,7 +41,7 @@ export default function AnimatedCheckbox({
       {/* Label */}
       <motion.label
         htmlFor={section.id}
-        className="cursor-pointer text-3xl font-medium text-gray-800 flex items-center"
+        className="cursor-pointer text-2xl font-medium text-gray-800 flex items-center"
         initial={{ scale: 1 }}
         animate={{
           scale: isChecked ? 1.1 : 1,

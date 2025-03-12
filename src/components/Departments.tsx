@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use query";
 import { getDepartmentsByBranch } from "@/app/actions";
 import { useQuery } from "@tanstack/react-query";
@@ -14,43 +15,49 @@ type DepartmentsProps = {
   id: string;
   setSelectedDepartment: (department: string) => void;
   selectedDepartment: string;
+  section?: string;
+  initialData?: any;
 };
 const Departments: React.FC<DepartmentsProps> = ({
   id,
   selectedDepartment,
   setSelectedDepartment,
+  section,
+  initialData,
 }) => {
-  const [selectedOption, setSelectedOption] = useState<DepartmentType | null>(
-    () => {
-      const saved = localStorage.getItem("selectedDepartment");
-      return saved ? JSON.parse(saved) : null;
-    }
-  );
+  const [selectedOption, setSelectedOption] = useState<DepartmentType | null>(() => {
+    const saved = localStorage.getItem("selectedDepartment");
+    return saved ? JSON.parse(saved) : null;
+  });
 
   const { error, isError, isLoading, data } = useQuery({
     queryKey: ["Departments", id],
     queryFn: () => getDepartmentsByBranch(id),
     enabled: !!id,
     gcTime: 1000 * 60 * 60,
+    initialData,
   });
 
   useEffect(() => {
-    if (selectedDepartment && !selectedOption && data) {
-      const department = data.find((d) => d.value === selectedDepartment);
+    if (section === "Nhân viên CSKH") {
+      if (id === "00") setSelectedDepartment("cm5uo3iqq0002114hymbr98v6");
+      if (id === "01") setSelectedDepartment("cm5uo3iqq0002114hymbr98v9");
+      if (id === "02") setSelectedDepartment("cm5uo3iqq0002114hymbr98v8");
+      if (id === "03") setSelectedDepartment("cm5uo3iqq0002114hymbr98v7");
+    }
+    if (selectedDepartment && data) {
+      const department = data.find((d: any) => d.value === selectedDepartment);
       if (department) {
         setSelectedOption(department);
       }
     }
-  }, [selectedDepartment, selectedOption, data]);
+  }, [selectedDepartment, selectedOption, data, section, id, setSelectedDepartment]);
 
   const handleChange = (newValue: SingleValue<DepartmentType>) => {
     if (newValue) {
       setSelectedOption(newValue);
       setSelectedDepartment(newValue.value);
       localStorage.setItem("selectedDepartment", JSON.stringify(newValue));
-
-      // Clear doctor selection
-      localStorage.removeItem("selectedDoctor");
     }
   };
   if (isLoading)
@@ -63,21 +70,11 @@ const Departments: React.FC<DepartmentsProps> = ({
   return (
     <div>
       <div className="mb-3">
-        <Label className="text-2xl text-violet-500 font-semibold">
-          Vui lòng chọn Phòng khám thực hiện
-        </Label>
+        <Label className="text-2xl text-violet-500 font-semibold">Vui lòng chọn Phòng khám thực hiện</Label>
       </div>
       <div>
-        {data && data.length == 0 && (
-          <div className="font-medium px-1">Chưa có dữ liệu</div>
-        )}
-        {data && data?.length > 0 && (
-          <Select
-            value={selectedOption}
-            onChange={handleChange}
-            options={data}
-          />
-        )}
+        {data && data.length == 0 && <div className="font-medium px-1">Chưa có dữ liệu</div>}
+        {data && data?.length > 0 && <Select value={selectedOption} onChange={handleChange} options={data} />}
       </div>
     </div>
   );

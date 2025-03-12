@@ -1,4 +1,5 @@
-"use query";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import { getDoctorByBranch } from "@/app/actions";
 import { useQuery } from "@tanstack/react-query";
 import React, { useEffect, useState } from "react";
@@ -15,12 +16,14 @@ type DoctorsProps = {
   setSelectedDoctor: (doctor: string) => void;
   selectedDoctor: string;
   section: string;
+  initialData?: any;
 };
 const Doctors: React.FC<DoctorsProps> = ({
   id,
   selectedDoctor,
   setSelectedDoctor,
   section,
+  initialData,
 }) => {
   const [selectedOption, setSelectedOption] = useState<DoctorType | null>(
     () => {
@@ -40,11 +43,14 @@ const Doctors: React.FC<DoctorsProps> = ({
     },
     enabled: !!id,
     gcTime: 1000 * 60 * 60,
+    initialData,
   });
 
   useEffect(() => {
     if (selectedDoctor && !selectedOption && data) {
-      const doctor = data.find((d) => d.value === selectedDoctor) as DoctorType;
+      const doctor = data.find(
+        (d: any) => d.value === selectedDoctor
+      ) as DoctorType;
       if (doctor) {
         setSelectedOption(doctor);
       }

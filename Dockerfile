@@ -48,11 +48,8 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
-ENV REDIS_HOST=redis
-ENV REDIS_PORT=6379
-ENV QUEUE_NAME=userLogs
-# ENV NEXT_PUBLIC_HOST="http://192.168.1.8:3000"
+
+
 
 # Chạy ứng dụng
 CMD ["bun", "run", "server.js"]
