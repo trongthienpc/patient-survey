@@ -1,8 +1,6 @@
 // Prisma Client generator for interacting with the database
 generator client {
-  provider      = "prisma-client-js"
-  output        = "./generated/db1"
-  binaryTargets = ["native", "rhel-openssl-3.0.x", "linux-musl"]
+  provider = "prisma-client-js"
 }
 
 // PostgreSQL as the data source
