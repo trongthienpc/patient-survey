@@ -5,7 +5,7 @@ import { useSurvey } from "./useSurvey";
 import SurveyQuestions from "./SurveyQuestions";
 import SurveyNavigation from "./SurveyNavigation";
 import BoxReveal from "../magic-ui/box-reveal";
-import { LoaderCircle } from "lucide-react";
+import { SelectedSheet } from "../SeletedSheet";
 
 const SurveyForm = () => {
   const {
@@ -19,13 +19,10 @@ const SurveyForm = () => {
     isMutating,
   } = useSurvey();
 
-  if (isLoading)
-    return (
-      <div>
-        <LoaderCircle className="animate-spin w-12 h-12" />
-      </div>
-    );
-
+  // Nếu delay kết thúc và isLoading = true, thì mở SelectedSheet
+  if (isLoading) {
+    return <SelectedSheet />;
+  }
   return (
     <div className="border border-dashed rounded-xl border-teal-500 grid grid-cols-1 lg:grid-cols-3">
       {/* Khối khảo sát */}

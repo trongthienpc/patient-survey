@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { toast } from "sonner";
 import { useSelection } from "@/providers/SelectionContext";
 import {
@@ -13,7 +13,6 @@ import {
 import { Answers, SurveyAnswer, SurveyResponse } from "@/types";
 import SatisfactionRating from "../SatisfactionRating";
 import MultipleChoiceQuestion from "../MultipleChoiceQuestion";
-import { LoaderCircle } from "lucide-react";
 import { useSubmitSurvey } from "@/hooks/useSubmitSurvey";
 
 const questionOptions: any = {
@@ -34,12 +33,9 @@ export const useSurvey = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const { trigger, isMutating } = useSubmitSurvey();
 
-  useEffect(() => {
-    if (selectedDepartment) setIsLoading(false);
-  }, [selectedDepartment]);
+  const isLoading = useMemo(() => !selectedDepartment || !selectedUser, [selectedDepartment, selectedUser]);
 
   const handleAnswerChange = useCallback((questionId: string, answer: Partial<SurveyAnswer>) => {
     setAnswers((prev) => ({
@@ -55,12 +51,6 @@ export const useSurvey = () => {
   };
 
   const getCurrentImage = () => {
-    if (!selectedDepartment)
-      return (
-        <div>
-          <LoaderCircle className="animate-spin" />
-        </div>
-      );
     return sectionImages[selectedDepartment?.label] || "/nurse.webp";
   };
 
