@@ -18,6 +18,33 @@ interface Rating {
   animationData: unknown;
   label: string;
 }
+export const ratings: Rating[] = [
+  {
+    level: "very_dissatisfied",
+    animationData: angryAnimation,
+    label: "Rất không hài lòng",
+  },
+  {
+    level: "dissatisfied",
+    animationData: sadAnimation,
+    label: "Không hài lòng",
+  },
+  {
+    level: "neutral",
+    animationData: mehAnimation,
+    label: "Bình thường",
+  },
+  {
+    level: "satisfied",
+    animationData: happyAnimation,
+    label: "Hài lòng",
+  },
+  {
+    level: "very_satisfied",
+    animationData: veryHappyAnimation,
+    label: "Rất hài lòng",
+  },
+];
 
 const SatisfactionRating = ({ question, onAnswerChange, initialAnswer }: SatisfactionRatingProps) => {
   const [rating, setRating] = useState<string | undefined>(undefined);
@@ -26,42 +53,14 @@ const SatisfactionRating = ({ question, onAnswerChange, initialAnswer }: Satisfa
     setRating(initialAnswer);
   }, [initialAnswer]);
 
-  const ratings: Rating[] = [
-    {
-      level: "very_dissatisfied",
-      animationData: angryAnimation,
-      label: "Rất không hài lòng",
-    },
-    {
-      level: "dissatisfied",
-      animationData: sadAnimation,
-      label: "Không hài lòng",
-    },
-    {
-      level: "neutral",
-      animationData: mehAnimation,
-      label: "Bình thường",
-    },
-    {
-      level: "satisfied",
-      animationData: happyAnimation,
-      label: "Hài lòng",
-    },
-    {
-      level: "very_satisfied",
-      animationData: veryHappyAnimation,
-      label: "Rất hài lòng",
-    },
-  ];
-
   const handleRatingChange = (level: string) => {
     setRating(level);
     onAnswerChange(level);
   };
 
   return (
-    <div className="w-full min-h-[350px]">
-      <h2 className="font-bold text-2xl mb-6 text-violet-500">{question}</h2>{" "}
+    <div className="w-full min-h-[320px]">
+      <h2 className="font-bold text-xl mb-6 text-violet-500">{question}</h2>{" "}
       <div className="grid grid-cols-5 gap-6">
         {ratings.map(({ level, animationData, label }) => (
           <button
@@ -70,7 +69,7 @@ const SatisfactionRating = ({ question, onAnswerChange, initialAnswer }: Satisfa
             onClick={() => handleRatingChange(level)}
           >
             <div>
-              <Lottie animationData={animationData} style={{ width: 80 }} />
+              <Lottie animationData={animationData} style={{ width: 75 }} />
             </div>
             <div className="text-center mt-3 text-xl font-semibold">{label}</div>{" "}
           </button>

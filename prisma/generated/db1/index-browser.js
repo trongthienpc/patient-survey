@@ -166,9 +166,32 @@ exports.Prisma.DepartmentScalarFieldEnum = {
   branchId: 'branchId'
 };
 
+exports.Prisma.SurveyResponseScalarFieldEnum = {
+  id: 'id',
+  branch: 'branch',
+  department: 'department',
+  user: 'user',
+  answers: 'answers',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserScalarFieldEnum = {
+  id: 'id',
+  value: 'value',
+  label: 'label',
+  departmentId: 'departmentId',
+  departmentName: 'departmentName',
+  branchId: 'branchId',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.JsonNullValueInput = {
+  JsonNull: Prisma.JsonNull
 };
 
 exports.Prisma.QueryMode = {
@@ -181,6 +204,12 @@ exports.Prisma.NullsOrder = {
   last: 'last'
 };
 
+exports.Prisma.JsonNullValueFilter = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull,
+  AnyNull: Prisma.AnyNull
+};
+
 
 exports.Prisma.ModelName = {
   Survey: 'Survey',
@@ -188,7 +217,9 @@ exports.Prisma.ModelName = {
   DissatisfiedReason: 'DissatisfiedReason',
   SatisfiedReason: 'SatisfiedReason',
   Doctor: 'Doctor',
-  Department: 'Department'
+  Department: 'Department',
+  SurveyResponse: 'SurveyResponse',
+  User: 'User'
 };
 
 /**

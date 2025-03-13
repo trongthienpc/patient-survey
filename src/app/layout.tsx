@@ -37,15 +37,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SelectionProvider>
           <QueryProvider>
             <div className="w-full h-screen relative bg-amber-300" style={{}}>
               <BackgroundGradientAnimation />
-              <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-                <div className="max-w-7xl max-h-screen  px-6">{children}</div>
+              <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center">
+                <div className="max-w-7xl px-6">{children}</div>
               </div>
             </div>
           </QueryProvider>

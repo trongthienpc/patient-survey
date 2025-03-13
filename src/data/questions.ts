@@ -178,8 +178,7 @@ export const dissatisfiedWithUltrasound = [
 export const dissatisfiedWithServiceCare = [
   {
     key: 1,
-    value:
-      "Cần NV nhiệt tình giải đáp trả lời thắc mắc những câu hỏi của tôi và người đi cùng",
+    value: "Cần NV nhiệt tình giải đáp những câu hỏi của tôi và người đi cùng",
     iconPath: Unamused,
   },
   {

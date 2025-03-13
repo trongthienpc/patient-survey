@@ -1,10 +1,10 @@
 import SelectedData from "@/components/SelectedData";
-import SurveyForm from "@/components/SurveyForm";
+import SurveyForm from "@/components/survey/SurveyForm";
 
 export const dynamic = "force-dynamic";
 export default function Home() {
   return (
-    <div className="h-full overflow-hidden flex flex-col gap-2">
+    <div className="h-full flex flex-col justify-center items-center">
       <SelectedData />
       <SurveyForm />
     </div>

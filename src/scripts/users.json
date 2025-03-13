@@ -1,0 +1,3152 @@
+[
+  {
+    "value": "PC-00001",
+    "label": "Nguyễn Thị Ngọc Hồ",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00012",
+    "label": "Bùi Long Vỹ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00013",
+    "label": "Hồ Văn Nhàn",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00037",
+    "label": "Cao Thị Nghĩa",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00038",
+    "label": "Nguyễn Duy Linh",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00044",
+    "label": "Lê Cao Nhân",
+    "departmentId": "NS",
+    "departmentName": "Trung Tâm Phẫu Thuật Nội Soi Phụ Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00046",
+    "label": "Lê Chí Công",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00051",
+    "label": "Trần Nhật Phượng",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00054",
+    "label": "Đặng Hoàng Minh",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu Thuật GMHS",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00124",
+    "label": "Nguyễn Ngọc Mẫn",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00127",
+    "label": "Hồ Thanh Vũ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00181",
+    "label": "Lê Kim Tiền",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00192",
+    "label": "Nguyễn Văn Ngọc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00219",
+    "label": "Lý Hoàng Sơn",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00252",
+    "label": "Lương Ngọc Bích",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00257",
+    "label": "Nguyễn Thị Bé Trinh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00268",
+    "label": "Phạm Bình Long",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00274",
+    "label": "Nguyễn Văn Trường",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00286",
+    "label": "Trương Văn Hào",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00304",
+    "label": "Trương Thị Quỳnh Như",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00356",
+    "label": "Lê Thị Bé Ngà",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00387",
+    "label": "Nguyễn Thanh Nhân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00405",
+    "label": "Lê Thành Nhân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00411",
+    "label": "Nguyễn Thị Nhã Đan",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00441",
+    "label": "Phạm Văn Vương",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00442",
+    "label": "Nguyễn Thị Thúy Hồng",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00446",
+    "label": "Dương Minh Chiến",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00472",
+    "label": "Nguyễn Thanh Phương",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00498",
+    "label": "Nguyễn Thị Hương",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00500",
+    "label": "Nguyễn Thanh Chơn",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00507",
+    "label": "Phan Nguyễn Bảo Huy",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00509",
+    "label": "Nguyễn Thị Bích Ngân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00513",
+    "label": "Lê Hùng Anh",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00518",
+    "label": "Nguyễn Minh Quân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00519",
+    "label": "Nguyễn Đôn Tiến",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00544",
+    "label": "Nguyễn Võ Trúc Giang",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00551",
+    "label": "Nguyễn Văn Sử",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00560",
+    "label": "Đỗ Thị Anh Thy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00561",
+    "label": "Trần Anh Hào",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00616",
+    "label": "Nguyễn Thị Mai Phương",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00636",
+    "label": "Lê Văn Thi",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00638",
+    "label": "Nguyễn Thành Trung",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00644",
+    "label": "Trương Hoàng Phúc",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00647",
+    "label": "Trần Anh Tiến",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00649",
+    "label": "Huỳnh Thanh Nguyên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00654",
+    "label": "Nguyễn Thanh Tuấn",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00714",
+    "label": "Lê Hà Thái Ngân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00717",
+    "label": "Đỗ Thị Thanh Nga",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00740",
+    "label": "Ngô Tuyết Liên Tử",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00741",
+    "label": "Liêu Thị Ngọc Huyền",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00742",
+    "label": "Nguyễn Thị Thúy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00754",
+    "label": "Phạm Thị Bích Vân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00765",
+    "label": "Bùi Ngọc Đang",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00768",
+    "label": "Huỳnh Võ Tiến",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00775",
+    "label": "Đỗ Thị Thanh Lan",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00778",
+    "label": "Thị Mỹ Duyên",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00782",
+    "label": "Nguyễn Tài Vô",
+    "departmentId": "NS",
+    "departmentName": "Trung Tâm Phẫu Thuật Nội Soi Phụ Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00786",
+    "label": "Huỳnh Công Thuấn",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00795",
+    "label": "Lâm Vĩnh Phát",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00797",
+    "label": "Lê Trung Thưởng",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00804",
+    "label": "Nguyễn Thành Vinh",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00805",
+    "label": "Huỳnh Thị Bảo Trân",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00809",
+    "label": "Võ Hồng Thắm",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00810",
+    "label": "Lại Thế Thập",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00827",
+    "label": "Huỳnh Ngọc Nguyên Khánh",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00836",
+    "label": "Trần Thanh Truyền",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00849",
+    "label": "Võ Thu Thảo",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00854",
+    "label": "Quách Văn Thanh",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00855",
+    "label": "Lê Thị Thu Vân",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00865",
+    "label": "Huỳnh Tấn Tài",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00869",
+    "label": "Nguyễn Minh Hiệp",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00892",
+    "label": "Nguyễn Minh Đức",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00912",
+    "label": "Trương Thị Anh Thi",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00913",
+    "label": "Huỳnh Thị Uyển Trang",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00919",
+    "label": "Hứa Thành Nhân",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00922",
+    "label": "Lê Minh Toàn",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00933",
+    "label": "Nguyễn Huỳnh Hạnh Dung",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00945",
+    "label": "Phan Lê Công",
+    "departmentId": "PHONGKSNK",
+    "departmentName": "Khoa Kiểm Soát Nhiễm Khuẩn",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00946",
+    "label": "Lao Ngọc Thanh Thư",
+    "departmentId": "BQLCL",
+    "departmentName": "Ban Quản Lý Chất Lượng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00955",
+    "label": "Tô Thị Mai Phương",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00959",
+    "label": "Nguyễn Nghinh Lương",
+    "departmentId": "PHONGKSNK",
+    "departmentName": "Khoa Kiểm Soát Nhiễm Khuẩn",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00974",
+    "label": "Phạm Thị Quỳnh Như",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00979",
+    "label": "Nguyễn Việt Quang",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00983",
+    "label": "Hồ Ngọc Thừa",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu Thuật GMHS",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00985",
+    "label": "Tăng Thị Thu Ba",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00987",
+    "label": "Võ Thị Khánh Nguyệt",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00993",
+    "label": "Nguyễn Khoa Hậu",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-00995",
+    "label": "Nguyễn Huỳnh Thanh Thanh",
+    "departmentId": "TTNOITIET",
+    "departmentName": "Trung Tâm Nội Tiết",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01000",
+    "label": "La Thị Diễm My",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01009",
+    "label": "Nguyễn Thị Ngọc Như",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01011",
+    "label": "Đặng Nguyễn Thị Như Ý",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01021",
+    "label": "Nguyễn Thanh Hưng",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01028",
+    "label": "Phạm Đặng Kim Trúc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01035",
+    "label": "Trần Minh Thâm",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01041",
+    "label": "Nguyễn Thị Ngân",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu Thuật GMHS",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01044",
+    "label": "Phan Quang Lộc",
+    "departmentId": "NS",
+    "departmentName": "Trung Tâm Phẫu Thuật Nội Soi Phụ Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01046",
+    "label": "Đỗ Thị Diễm Kiều",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01047",
+    "label": "Phan Thị Mỹ Xuyên",
+    "departmentId": "NS",
+    "departmentName": "Trung Tâm Phẫu Thuật Nội Soi Phụ Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01049",
+    "label": "Phan Thị Thanh Hằng",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01053",
+    "label": "Trần Thị Thùy Linh",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01062",
+    "label": "Nguyễn Thị Bảo Hà",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01064",
+    "label": "Võ Đông Hải",
+    "departmentId": "NS",
+    "departmentName": "Trung Tâm Phẫu Thuật Nội Soi Phụ Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01070",
+    "label": "Phương Ngọc Mãi",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01071",
+    "label": "Trương Hữu Lộc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01086",
+    "label": "Bùi Thị Kim Liễu",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01087",
+    "label": "Lê Thùy Anh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01099",
+    "label": "Nguyễn Đức Vinh",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01100",
+    "label": "Trần Thị Trúc Linh",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01116",
+    "label": "Trịnh Ngọc Hoàng Thơ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01119",
+    "label": "Phạm Thị Ngọc Phương",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01142",
+    "label": "Đoàn Ngọc Thu",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01143",
+    "label": "Nguyễn Thị Thanh Hậu",
+    "departmentId": "TTNOITIET",
+    "departmentName": "Trung Tâm Nội Tiết",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01171",
+    "label": "Nguyễn Thị Cẩm Tiên",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01187",
+    "label": "Nguyễn Dũng Phương",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01188",
+    "label": "Nguyễn Hồng Sĩ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01194",
+    "label": "Phan Bích Ngọc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01198",
+    "label": "Nguyễn Minh Mẫn",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01202",
+    "label": "Lê Ái Thi",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01209",
+    "label": "Lê Thị Phong Lan",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01211",
+    "label": "Nguyễn Thị Mỹ Dung",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01212",
+    "label": "Võ Lê Thúy Uyên",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01213",
+    "label": "Đỗ Kiều Anh Thư",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01216",
+    "label": "Tiêu Thanh Cẩm Tiên",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu Thuật GMHS",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01222",
+    "label": "Nguyễn Đăng Dũng",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01223",
+    "label": "Trần Thị Lệ Thủy",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01230",
+    "label": "Nguyễn Phán Quyết",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01232",
+    "label": "Trần Hải Hưng",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01242",
+    "label": "Phan Kim Ly",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01244",
+    "label": "Trần Thanh Thúy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01245",
+    "label": "Huỳnh Minh Thoại",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc khách hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01251",
+    "label": "Trần Quốc Huy",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01257",
+    "label": "Nguyễn Anh Thiện Duyên",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01267",
+    "label": "Nguyễn Bích Ngân",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01275",
+    "label": "Huỳnh Trọng Nghĩa",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01278",
+    "label": "Trần Hoàng Mỹ Linh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01286",
+    "label": "Nguyễn Thị Diễm",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01295",
+    "label": "Võ Hoàng Nhi",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01317",
+    "label": "Nguyễn Văn Hiếu",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01318",
+    "label": "Nguyễn Tấn Phát",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01323",
+    "label": "Phan Thanh Hận",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01324",
+    "label": "Lưu Thị Trâm Anh",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01326",
+    "label": "Trần Thị Lam Phương",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01339",
+    "label": "Nguyễn Thị Thúy Duy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01340",
+    "label": "Ngô Thanh Thanh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01344",
+    "label": "Lê Nguyễn Huỳnh Như",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01345",
+    "label": "Lương Kim Phượng",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01346",
+    "label": "Cao Hoàng Minh",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01347",
+    "label": "Chung Thị Ngọc Liên",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01348",
+    "label": "Đỗ Hồng Khánh",
+    "departmentId": "CCPS",
+    "departmentName": "Khoa Cấp Cứu SPK - Phòng Sanh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01349",
+    "label": "Nguyễn Thái Nhân",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01352",
+    "label": "Trần Thị Mỹ Linh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01355",
+    "label": "Nguyễn Minh Trí",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01358",
+    "label": "Huỳnh Thị Cẩm Tú",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01359",
+    "label": "Cao Thị Ngọc Trúc",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01360",
+    "label": "Huỳnh Thị Thu Thảo",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01363",
+    "label": "Nguyễn Phúc Nhân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01384",
+    "label": "Đỗ Hoàng Thức",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01390",
+    "label": "Lâm Hồng Phúc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01391",
+    "label": "Phan Thanh Liêm",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01392",
+    "label": "Trần Thị Ngọc Diễm",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01399",
+    "label": "Nhâm Huỳnh Hải Vy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01401",
+    "label": "Hà Thị Linh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01403",
+    "label": "Hà Huỳnh Dư",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01404",
+    "label": "Lương Trúc Ly",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01405",
+    "label": "Lâm Điền",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01407",
+    "label": "Phan Đặng Trang Đài",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01413",
+    "label": "Phạm Hoàng Học",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01414",
+    "label": "Trần Phát Tài",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01418",
+    "label": "Nguyễn Ngọc Vi Thư",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01425",
+    "label": "Đinh Hương Huệ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01431",
+    "label": "Nguyễn Thị Thanh Huyền",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01432",
+    "label": "Nguyễn Sương Mai",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01435",
+    "label": "Phạm Kiều Thy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01449",
+    "label": "Lê Thị Thúy Duy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01450",
+    "label": "Huỳnh Thị Mai",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01452",
+    "label": "Mai Thị Thảo Ngân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01459",
+    "label": "Phạm Thị Hòa",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01469",
+    "label": "Phan Nhật Nam",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01470",
+    "label": "Lương Huỳnh Tâm Sung",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01472",
+    "label": "Lâm Thị Diểu",
+    "departmentId": "TTNOITIET",
+    "departmentName": "Trung Tâm Nội Tiết",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01486",
+    "label": "Hứa Lan Duy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01488",
+    "label": "Danh Ánh Sáng",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01490",
+    "label": "Nguyễn Thị Hồng Ơn",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01506",
+    "label": "Lâm Văn Cân",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01513",
+    "label": "Nguyễn Đào Nhật Minh",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01516",
+    "label": "Trần Gia Phát",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01520",
+    "label": "Lê Văn Hiếu",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01524",
+    "label": "Đỗ Đức Trí Nhân",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01529",
+    "label": "Lê Thị Thanh Thủy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01531",
+    "label": "Võ Ngọc Duyên Bình",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu Thuật GMHS",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01534",
+    "label": "Nguyễn Ngọc Trân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01535",
+    "label": "Lê Kim Trang",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01538",
+    "label": "Lý Thị Diễm Trang",
+    "departmentId": "TTMTA",
+    "departmentName": "Trung Tâm Mắt Tinh Anh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01544",
+    "label": "Kiều Thanh Kiên",
+    "departmentId": "TTMTA",
+    "departmentName": "Trung Tâm Mắt Tinh Anh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01546",
+    "label": "Võ Anh Kiệt",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01559",
+    "label": "Trương Ngọc Minh Châu",
+    "departmentId": "IVF",
+    "departmentName": "Đơn Vị HTSS IVF Phương Châu",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01573",
+    "label": "Nguyễn Phước Tiến",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01576",
+    "label": "Nguyễn Thị Tuyết Minh",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01583",
+    "label": "Lê Minh Hưng",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01586",
+    "label": "Nguyễn Tấn Thọ",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01592",
+    "label": "Tạ Thị Thái Thy",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01594",
+    "label": "Trần Thị Hoa Ni",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Hậu Sản",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01602",
+    "label": "Lâm Thị Hồng Diễm",
+    "departmentId": "TTNOITIET",
+    "departmentName": "Trung Tâm Nội Tiết",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01603",
+    "label": "Nguyễn Thiên Trang",
+    "departmentId": "TTNOITIET",
+    "departmentName": "Trung Tâm Nội Tiết",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01614",
+    "label": "Nguyễn Thị Anh Thư",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01630",
+    "label": "Phạm Thanh Liêm",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01631",
+    "label": "Trần Nhật Linh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01634",
+    "label": "Phạm Phi Yến",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01635",
+    "label": "Trần Trương Trang Nhã",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01642",
+    "label": "Dương Hồng Phúc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01650",
+    "label": "Lê Thị Ngọc Hân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01651",
+    "label": "Lê Thị Thùy Dương",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01652",
+    "label": "Huỳnh Thị Kim Ngân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01664",
+    "label": "Dương Lê Hồng Thảo",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Bệnh Đa Khoa",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01672",
+    "label": "Phạm Thị Phúc Hậu",
+    "departmentId": "TTMTA",
+    "departmentName": "Trung Tâm Mắt Tinh Anh",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01673",
+    "label": "Đào Thị Ngọc Thúy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01674",
+    "label": "Nguyễn Văn Mười Một",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01687",
+    "label": "Tăng Phương Vy",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01691",
+    "label": "Lê Thanh Giang",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01712",
+    "label": "Mai Duy Khánh",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01718",
+    "label": "Diệp Tiểu Bình",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01722",
+    "label": "Trần Thị Thúy An",
+    "departmentId": "BQLCL",
+    "departmentName": "Ban Quản Lý Chất Lượng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01726",
+    "label": "Nguyễn Hiền Nhi",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01730",
+    "label": "Huỳnh Huy Cường",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01731",
+    "label": "Kha Nhất Huy",
+    "departmentId": "KN",
+    "departmentName": "Khoa Nội - Ngoại",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01732",
+    "label": "Võ Thị Thanh Thảo",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01735",
+    "label": "Lê Thành Nhân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm Sóc Khách Hàng",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-01737",
+    "label": "Lê Thị Thùy An",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh SPK",
+    "branchId": "00"
+  },
+  {
+    "value": "PC-10061",
+    "label": "Trần Minh Tân Em",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10076",
+    "label": "Trần Ngọc Dư",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10078",
+    "label": "Nguyễn Minh Thành",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu thuật GMHS",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10118",
+    "label": "Lê Nguyễn Đình Lam",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10157",
+    "label": "Võ Thanh Hoài",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu thuật GMHS",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10165",
+    "label": "Nguyễn Đăng Khoa",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10195",
+    "label": "Nguyễn Thị Tuyết Minh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10201",
+    "label": "Nguyễn Thị Thùy Dung",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10206",
+    "label": "Nguyễn Thị Thùy Dung",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10226",
+    "label": "Nguyễn Hữu Tiền",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10230",
+    "label": "Nguyễn Thị Phước Nguyên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10233",
+    "label": "Huỳnh Cẩm Nguyên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10247",
+    "label": "Lê Nguyễn Nhất Thanh",
+    "departmentId": "KDK",
+    "departmentName": "Khối Đa Khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10252",
+    "label": "Nguyễn Trường Duy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10261",
+    "label": "Nóoch Tuấn Lộc",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10266",
+    "label": "Ngô Thúy Kiều",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10272",
+    "label": "Lê Quốc Tuấn",
+    "departmentId": "BQLCL",
+    "departmentName": "Phòng Quản Lý Chất Lượng",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10279",
+    "label": "Đào Phan Hải Đăng",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10287",
+    "label": "Nguyễn Đắc Thắng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10289",
+    "label": "Trì Trọng Nhân",
+    "departmentId": "KSPK",
+    "departmentName": "Khoa Sản phụ khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10290",
+    "label": "Lê Vũ Khánh Huỳnh",
+    "departmentId": "KSPK",
+    "departmentName": "Khoa Sản phụ khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10301",
+    "label": "Nguyễn Thị Như Ý",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10312",
+    "label": "Nguyễn Văn Trọng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10314",
+    "label": "Võ Thanh Huy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10315",
+    "label": "Nguyễn Vũ Thuận",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Cận lâm sàng",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10333",
+    "label": "Lê Thị Mỹ",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10334",
+    "label": "Lê Hoàng Yến",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10336",
+    "label": "Trần Thị Huyền Trang",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10337",
+    "label": "Lê Yến Nhi",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10350",
+    "label": "Lê Thị Như Quỳnh",
+    "departmentId": "KDK",
+    "departmentName": "Khối Đa Khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10360",
+    "label": "Bùi Vĩnh Thành",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10362",
+    "label": "Dương Tuấn Hòa",
+    "departmentId": "PHONGKSNK",
+    "departmentName": "Khoa Kiểm Soát Nhiễm Khuẩn",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10364",
+    "label": "Trần Minh Tiền",
+    "departmentId": "KDK",
+    "departmentName": "Khối Đa Khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10373",
+    "label": "Phan Thị Hồng Thanh",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Cận lâm sàng",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10382",
+    "label": "Lê Thị Mộng Thi",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10390",
+    "label": "Phạm Thị Lá",
+    "departmentId": "KSPK",
+    "departmentName": "Khoa Sản phụ khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10393",
+    "label": "Phạm Phương Mai",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10394",
+    "label": "Nguyễn Thị Phương Khanh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10395",
+    "label": "Nguyễn Thị Kim Ngân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10396",
+    "label": "Trần Ngọc Trâm",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10403",
+    "label": "Huỳnh Minh Hậu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10410",
+    "label": "Lê Hoàng Thái",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10421",
+    "label": "Nguyễn Chí Nguyện",
+    "departmentId": "CSKHMKT",
+    "departmentName": "Phòng CSKH-MKT",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10423",
+    "label": "Phan Minh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10426",
+    "label": "Võ Trường Trung Hiếu",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10437",
+    "label": "Huỳnh Nguyễn Xuân Oanh",
+    "departmentId": "CSKHMKT",
+    "departmentName": "Phòng CSKH-MKT",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10443",
+    "label": "Nguyễn Việt Nam",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10445",
+    "label": "Huỳnh Ngọc Kết",
+    "departmentId": "KSPK",
+    "departmentName": "Khoa Sản phụ khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10447",
+    "label": "Lê Vạn Tấn",
+    "departmentId": "KDK",
+    "departmentName": "Khối Đa Khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10448",
+    "label": "Trần Chưởng Chiêu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10449",
+    "label": "Nguyễn Lê Thảo Vy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng CSKH-MARKETING",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10450",
+    "label": "Lê Bích Trâm",
+    "departmentId": "CSKHMKT",
+    "departmentName": "Phòng CSKH-MKT",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10457",
+    "label": "Văn Thị Uyên",
+    "departmentId": "KSPK",
+    "departmentName": "Khoa Sản phụ khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10458",
+    "label": "Huỳnh Vưu Khánh Linh",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-10465",
+    "label": "Nguyễn Văn Giang",
+    "departmentId": "KDK",
+    "departmentName": "Khối Đa Khoa",
+    "branchId": "01"
+  },
+  {
+    "value": "PC-20007",
+    "label": "Kim Ngọc Tuyền",
+    "departmentId": "PS",
+    "departmentName": "Cấp cứu sản phụ khoa - Phòng Sanh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20008",
+    "label": "Thạch Ngọc Bích",
+    "departmentId": "PS",
+    "departmentName": "Cấp cứu sản phụ khoa - Phòng Sanh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20016",
+    "label": "Lý Thị Ngọc Quyền",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20051",
+    "label": "Huỳnh Hữu Tình",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20054",
+    "label": "Phạm Thảo Khuyên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20056",
+    "label": "Tạ Thị Yến Lan",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20057",
+    "label": "Trang Thùy Dương",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20058",
+    "label": "Hà Thị Yến Ngọc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20070",
+    "label": "Danh Thị Thên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20071",
+    "label": "Dương Thị Cẩm Như",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20076",
+    "label": "Dương Hữu Thọ",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20092",
+    "label": "Thạch Thị Ngọc Châu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20093",
+    "label": "Trần Văn Kỳ",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20098",
+    "label": "Trần Quốc Huy",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20100",
+    "label": "Thái Thị Mỹ Phụng",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20128",
+    "label": "Quách Văn Âu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20129",
+    "label": "Phạm Thanh Tiến",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20154",
+    "label": "Nguyễn Văn Bình",
+    "departmentId": "KNTQ",
+    "departmentName": "Khoa Nội-Ngoại",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20155",
+    "label": "Nguyễn Kỳ Minh",
+    "departmentId": "KNTQ",
+    "departmentName": "Khoa Nội-Ngoại",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20157",
+    "label": "Bùi Thị Huyền Trang",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20162",
+    "label": "Nguyễn Văn Đức",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20167",
+    "label": "Hồ Thanh Tài",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20168",
+    "label": "Danh Hà Định",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20169",
+    "label": "Châu Ngọc Bửu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20170",
+    "label": "Huỳnh Tấn Giang",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20180",
+    "label": "Phan Văn Phúc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20196",
+    "label": "Nguyễn Thanh Khuyến",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20197",
+    "label": "Trương Đại Bạch",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20198",
+    "label": "Trịnh Thành Dỡn",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20208",
+    "label": "Âu Bửu Trân",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20222",
+    "label": "Trần Kim Lân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20223",
+    "label": "Đinh Ngọc Hẳng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20236",
+    "label": "Phạm Duy Ngọc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20240",
+    "label": "Quách An Hưng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20249",
+    "label": "Trương Cẩm Thúy",
+    "departmentId": "BQLCL",
+    "departmentName": "Phòng Quản Lý Chất Lượng",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20267",
+    "label": "Trần Thế Hùng",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20268",
+    "label": "Trần Văn Giang",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20277",
+    "label": "Dư Huỳnh Hồng Ngọc",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20279",
+    "label": "Phan Quốc Thịnh",
+    "departmentId": "PHONGKSNK",
+    "departmentName": "Khoa Kiểm Soát Nhiễm Khuẩn",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20284",
+    "label": "Lê Thị Quỳnh Mai",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20291",
+    "label": "Nguyễn Thị Mộng Chúc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20292",
+    "label": "Cao Danh Vịnh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20293",
+    "label": "Huỳnh Nguyễn Duy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20294",
+    "label": "Danh Minh",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20295",
+    "label": "Liêu Tấn Hưng",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Nội trú Sản phụ khoa",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20320",
+    "label": "Huỳnh Đức",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20322",
+    "label": "Nguyễn Thị Ngọc Hân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20348",
+    "label": "Trần Bích Phượng",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20350",
+    "label": "Thạch Minh Sơn",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20359",
+    "label": "Nguyễn Trang Thư",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20365",
+    "label": "Bành Mỹ Hoa",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20381",
+    "label": "Nguyễn Bùi Thảo Ngân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20382",
+    "label": "Đỗ Thị Kim Yến",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20386",
+    "label": "Trần Huỳnh Như",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20397",
+    "label": "Lê Minh Phú",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20402",
+    "label": "Đoàn Huỳnh Như",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20405",
+    "label": "Lê Hoàng Nghĩa",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20432",
+    "label": "Phan Thị Thanh Thùy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20441",
+    "label": "Trần Thị Chúc Linh",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Nội trú Sản phụ khoa",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20458",
+    "label": "Vương Ngọc Thắng",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20468",
+    "label": "Phạm Hữu Hiếu",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20469",
+    "label": "Trần Phát Đạt",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Phẫu thuật GMHS",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20470",
+    "label": "Trần Quý Xuân",
+    "departmentId": "HAUSAN",
+    "departmentName": "Khoa Nội trú Sản phụ khoa",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20474",
+    "label": "Võ Thị Nghĩa",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20475",
+    "label": "Châu Song Kiều",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20477",
+    "label": "Lý Thị Thanh Ngoan",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20478",
+    "label": "Nguyễn Thị Trúc Đào",
+    "departmentId": "BQLCL",
+    "departmentName": "Phòng Quản Lý Chất Lượng",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20482",
+    "label": "Trần Thùy An",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20488",
+    "label": "Lê Hồ Phước Đại",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20492",
+    "label": "Tô Thị Kim Thu",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20497",
+    "label": "Phạm Đắc Lộc",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng hợp",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20499",
+    "label": "Triệu Mỹ Thùy Kim",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20505",
+    "label": "Đinh Nguyễn Tố Mai",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20506",
+    "label": "Nguyễn Hoàng Tố Nhi",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20511",
+    "label": "Trần Thị Ngọc Thảo",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20520",
+    "label": "Ngô Trúc Phương",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20526",
+    "label": "Khổng Thị Tú Trân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20529",
+    "label": "Nguyễn Thị Ngọc Thảo",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20535",
+    "label": "Trần Hồ Ngọc Nhi",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20544",
+    "label": "Phùng Công Thưởng",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi - sơ sinh ",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-20547",
+    "label": "Đỗ Tấn Minh",
+    "departmentId": "KB",
+    "departmentName": "Khoa Khám Bệnh",
+    "branchId": "02"
+  },
+  {
+    "value": "PC-30014",
+    "label": "Lư Thị Ngọc Loan",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30015",
+    "label": "Phan Ngô Uyên Linh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30033",
+    "label": "Nguyễn Thị Thúy Loan",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30036",
+    "label": "Nguyễn Hoàng Tuấn",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30041",
+    "label": "Nguyễn Văn Bảo Trân",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30043",
+    "label": "Hoàng Thị Ánh Tuyết",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30045",
+    "label": "Lương Thị Thuyền",
+    "departmentId": "BQLCL",
+    "departmentName": "Phòng Quản Lý Chất Lượng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30046",
+    "label": "Đoàn Lê Thanh Khoa",
+    "departmentId": "BQLCL",
+    "departmentName": "Phòng Quản Lý Chất Lượng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30050",
+    "label": "Trần Tài Năng",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30051",
+    "label": "Cao Ngọc Đan Thanh",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30054",
+    "label": "Chu Tú Phương",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30065",
+    "label": "Nguyễn Huyền Trân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30066",
+    "label": "Tạ Huỳnh Như",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30076",
+    "label": "Lê Nguyễn Nhật Trung",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30077",
+    "label": "Đặng Ngọc Tuyền",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30083",
+    "label": "Mai Giáng Khuê",
+    "departmentId": "KHTH",
+    "departmentName": "Phòng Kế Hoạch Tổng Hợp",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30093",
+    "label": "Nguyễn Kim Loan",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30094",
+    "label": "Nguyễn Phương Khanh",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30098",
+    "label": "Phan Thị Hiền Thu",
+    "departmentId": "DVDD",
+    "departmentName": "Khoa Dinh dưỡng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30100",
+    "label": "Lê Thị Hồng Huệ",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30122",
+    "label": "Nguyễn Thị Xuân Yến",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30133",
+    "label": "Văn Phụng Thống",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30140",
+    "label": "Nguyễn Thị Mỹ Phước",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30145",
+    "label": "Vương Huy Tuấn",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30158",
+    "label": "Lâm Thị Thu Trinh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30160",
+    "label": "Đặng Thanh Bình",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Gây mê Hồi sức",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30163",
+    "label": "Lâm Thúy Liên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30175",
+    "label": "Võ Châu Mười Một",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30176",
+    "label": "Bùi Quang Minh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30182",
+    "label": "Phạm Thị Lan",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30185",
+    "label": "Trần Hà Phương Tâm",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30199",
+    "label": "Nguyễn Thành Tứ",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30218",
+    "label": "Phương Gia Mẫn",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30234",
+    "label": "Trần Tiểu Thanh",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30244",
+    "label": "Lê Thị Ngọc Duyên",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Đa Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30246",
+    "label": "Hà Thị Loan",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30257",
+    "label": "Huỳnh Thắng Toàn",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Đa Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30261",
+    "label": "Nguyễn Chí Lân",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Đa Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30275",
+    "label": "Nguyễn Trần Nữ Hà An",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30283",
+    "label": "Nguyễn Háo Cao Huy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30288",
+    "label": "Nguyễn Hữu Dũng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30290",
+    "label": "Nguyễn Vũ Đình Hoàng",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30293",
+    "label": "Trần Trang Thanh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30299",
+    "label": "Trần Ngọc Thanh Tâm",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30310",
+    "label": "Vũ Đức Tùng",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30312",
+    "label": "Phạm Hoài Thư",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30318",
+    "label": "Nguyễn Thị Hồng Ngọc",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30333",
+    "label": "Lê Nguyễn Viễn Phong",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30335",
+    "label": "Đặng Hồng Ngọc Quý",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30336",
+    "label": "Lê A Huy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30337",
+    "label": "Lê Thị Thủy Tiên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30340",
+    "label": "Nguyễn Thị Phương Dung",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30341",
+    "label": "Đặng Thanh Phong",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30349",
+    "label": "Mai Thị Thủy Tiên",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30361",
+    "label": "Nguyễn Hoàng Phúc",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30375",
+    "label": "Phạm Hoàng Vũ",
+    "departmentId": "TTNIEUNAM",
+    "departmentName": "Trung tâm Tiết Niệu Nam Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30378",
+    "label": "Nguyễn Thị Thảo",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30382",
+    "label": "Vũ Thị Quỳnh Nga",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30386",
+    "label": "Nguyễn Thị Hồng Loan",
+    "departmentId": "NHI",
+    "departmentName": "Khoa Nhi",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30391",
+    "label": "Trần Thanh Giàu",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30397",
+    "label": "Vũ Đình Hiếu",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30408",
+    "label": "Bùi Mạnh Côn",
+    "departmentId": "BGD",
+    "departmentName": "Ban Giám Đốc",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30421",
+    "label": "Nguyễn Thị Ngọc Lanh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30425",
+    "label": "Nguyễn Thị Thảo Trúc",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30435",
+    "label": "Phạm Hoàng Ngọc Trân",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Chăm sóc khách hàng - Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30444",
+    "label": "Đào Bảo Ngân",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30458",
+    "label": "Võ Ngọc Lan Phương",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30467",
+    "label": "Trần Thị Giang",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30472",
+    "label": "Trần Hạnh Nhân",
+    "departmentId": "SAN",
+    "departmentName": "Khoa Sản",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30476",
+    "label": "Trần Uyển Nhi",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30480",
+    "label": "Nguyễn Anh Phong",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30525",
+    "label": "Nguyễn Ngọc thanh Thảo",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30530",
+    "label": "Thạch Thị Mai Trinh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30541",
+    "label": "Phạm Thị Thảo Phương",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30543",
+    "label": "Nguyễn Đức Minh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30545",
+    "label": "Nguyễn Lữ Minh Phương",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30551",
+    "label": "Nguyễn Cảnh Duy",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30552",
+    "label": "Ngô Mỹ Duyên",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30554",
+    "label": "Trần Thành Công",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Đa Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30558",
+    "label": "Trần Vi Quỳnh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30559",
+    "label": "Nguyễn Phạm Lan Anh",
+    "departmentId": "MARKETING",
+    "departmentName": "Phòng Marketing",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30561",
+    "label": "Lê Anh Phương",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Gây mê Hồi sức",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30610",
+    "label": "Lê Hữu Bình",
+    "departmentId": "GMHS",
+    "departmentName": "Khoa Gây mê Hồi sức",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30655",
+    "label": "Đỗ Thanh Thủy",
+    "departmentId": "CDHA",
+    "departmentName": "Khoa Chẩn Đoán Hình Ảnh",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30709",
+    "label": "Nguyễn Thi Nghĩa",
+    "departmentId": "KDK",
+    "departmentName": "Khoa Khám Đa Khoa",
+    "branchId": "03"
+  },
+  {
+    "value": "PC-30713",
+    "label": "Lý Khắc Chinh",
+    "departmentId": "CSKH",
+    "departmentName": "Phòng Chăm sóc Khách hàng",
+    "branchId": "03"
+  }
+]

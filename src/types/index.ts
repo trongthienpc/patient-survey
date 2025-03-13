@@ -20,3 +20,13 @@ export interface SurveyAnswer {
 export interface Answers {
   [key: string]: SurveyAnswer;
 }
+
+export interface SurveyResponse {
+  branch: string;
+  user: string;
+  department: string;
+  rating?: string;
+  selectedOptions: string[];
+  feedback?: string;
+  createdAt: Date;
+}

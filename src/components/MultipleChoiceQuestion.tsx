@@ -41,7 +41,7 @@ const MultipleChoiceQuestion = ({
   };
 
   return (
-    <div className="my-2 h-full px-6">
+    <div className="my-2 h-full px-1">
       <p className={cn("mb-3 text-2xl font-semibold", id === "satisfied" ? "text-violet-500" : "text-amber-500")}>
         {question}
       </p>
@@ -51,14 +51,14 @@ const MultipleChoiceQuestion = ({
             <div
               onClick={() => toggleOption(option)}
               className={cn(
-                "w-full flex items-center justify-start space-x-2 text-wrap text-left h-28 rounded border border-dashed border-violet-500",
+                "w-full px-3 flex items-center justify-start space-x-2 text-wrap text-left h-28 rounded border border-dashed border-violet-500",
                 selectedOptions.includes(option.value) ? "bg-violet-500 text-white" : ""
               )}
             >
               <div>
                 <Lottie animationData={option.iconPath} loop={true} style={{ width: "60px", height: "60px" }} />
               </div>
-              <span className="text-xl font-normal">{option.value}</span>
+              <span className="text-xl font-normal text-left">{option.value}</span>
             </div>
           </div>
         ))}
