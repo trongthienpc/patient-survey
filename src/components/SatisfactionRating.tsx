@@ -60,18 +60,24 @@ const SatisfactionRating = ({ question, onAnswerChange, initialAnswer }: Satisfa
 
   return (
     <div className="w-full min-h-[320px]">
-      <h2 className="font-bold text-xl mb-6 text-violet-500">{question}</h2>{" "}
-      <div className="grid grid-cols-5 gap-6">
+      <h2 className="font-bold text-xl sm:text-2xl mb-6 text-primary">{question}</h2>{" "}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 w-full">
         {ratings.map(({ level, animationData, label }) => (
           <button
             key={level}
-            className={`p-2 rounded-lg flex flex-col items-center ${rating === level ? "bg-gray-200" : ""}`}
+            type="button"
+            className={`w-full last:col-span-2 md:last:col-span-1 p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center transition-all duration-200 border-2 aspect-square md:aspect-auto md:h-auto min-h-[140px] ${rating === level
+              ? "bg-primary/10 border-primary shadow-inner scale-[1.02]"
+              : "bg-white border-transparent hover:bg-gray-50 hover:shadow-md active:scale-95"
+              }`}
             onClick={() => handleRatingChange(level)}
           >
-            <div>
-              <Lottie animationData={animationData} style={{ width: 75 }} />
+            <div className="transform transition-transform duration-300 group-hover:scale-110 mb-2 sm:mb-3">
+              <Lottie animationData={animationData} className="w-16 h-16 sm:w-[75px] sm:h-[75px]" />
             </div>
-            <div className="text-center mt-3 text-xl font-semibold">{label}</div>{" "}
+            <div className={`text-center text-sm sm:text-base lg:text-lg font-medium leading-tight ${rating === level ? "text-primary" : "text-gray-600"}`}>
+              {label}
+            </div>
           </button>
         ))}
       </div>

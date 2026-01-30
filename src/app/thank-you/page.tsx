@@ -25,17 +25,17 @@ const ThankYouPage = () => {
     <div className="flex flex-col items-center justify-center h-full gap-6">
       <div className="text-center flex flex-col justify-center items-center ">
         <div className="mb-6">
-          <h2 className="text-4xl font-normal">
-            <span className="text-violet-500 font-semibold"> Phương Châu </span>
+          <h2 className="text-4xl font-normal text-gray-800">
+            <span className="text-primary font-bold"> Phương Châu </span>
             xin cảm ơn Quý khách đã tin tưởng và để lại những chia sẻ về{" "}
-            <span className="text-green-500 font-semibold underline">
+            <span className="text-primary font-bold underline decoration-primary/30">
               chất lượng trải nghiệm{" "}
             </span>
             dành cho chúng tôi
           </h2>
         </div>
         <div>
-          <p className="mt-2 text-4xl leading-[3rem]">
+          <p className="mt-2 text-4xl leading-[3rem] text-gray-600 font-light">
             Kính chúc <br /> Quý khách nhiều sức khỏe!
           </p>
         </div>
@@ -58,9 +58,9 @@ const ThankYouPage = () => {
         />
       </div>
       <div>
-        <p className="text-xl">
+        <p className="text-xl text-gray-500">
           Trang sẽ tự động làm mới trong{" "}
-          <span className="text-5xl font-extrabold text-blue-600">
+          <span className="text-5xl font-extrabold text-primary">
             {countdown}
           </span>{" "}
           giây.

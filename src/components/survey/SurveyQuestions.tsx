@@ -3,7 +3,7 @@ interface SurveyQuestionsProps {
 }
 
 const SurveyQuestions: React.FC<SurveyQuestionsProps> = ({ renderQuestion }) => {
-  return <div className="max-h-[720px] flex flex-col gap-9 px-3">{renderQuestion()}</div>;
+  return <div className="flex flex-col gap-6 md:gap-8 px-1 pb-4 max-w-3xl mx-auto w-full">{renderQuestion()}</div>;
 };
 
 export default SurveyQuestions;

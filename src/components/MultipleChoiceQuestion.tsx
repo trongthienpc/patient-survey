@@ -9,7 +9,10 @@ interface MultipleChoiceQuestionProps {
   id: string;
   question: string;
   options: Question[];
-  onAnswerChange: (answers: { selectedOptions: string[]; feedback: string }) => void;
+  onAnswerChange: (answers: {
+    selectedOptions: string[];
+    feedback: string;
+  }) => void;
   initialAnswer: string[] | undefined;
 }
 const MultipleChoiceQuestion = ({
@@ -17,7 +20,6 @@ const MultipleChoiceQuestion = ({
   options,
   onAnswerChange,
   initialAnswer,
-  id,
 }: MultipleChoiceQuestionProps) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<string>("");
@@ -42,23 +44,35 @@ const MultipleChoiceQuestion = ({
 
   return (
     <div className="my-2 h-full px-1">
-      <p className={cn("mb-3 text-2xl font-semibold", id === "satisfied" ? "text-violet-500" : "text-amber-500")}>
+      <p className={cn("mb-4 text-xl sm:text-2xl font-semibold text-primary")}>
         {question}
       </p>
-      <div className="grid lg:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
         {options.map((option) => (
-          <div className="flex items-center justify-center w-full" key={option.key}>
+          <div
+            className="flex items-stretch justify-center w-full"
+            key={option.key}
+          >
             <div
               onClick={() => toggleOption(option)}
               className={cn(
-                "w-full px-3 flex items-center justify-start space-x-2 text-wrap text-left h-28 rounded border border-dashed border-violet-500",
-                selectedOptions.includes(option.value) ? "bg-violet-500 text-white" : ""
+                "w-full px-4 flex items-center justify-start space-x-4 text-left min-h-[100px] sm:min-h-[112px] py-4 rounded-xl border-2 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md active:scale-[0.98]",
+                selectedOptions.includes(option.value)
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-100 hover:border-primary/50 hover:bg-gray-50",
               )}
             >
-              <div>
-                <Lottie animationData={option.iconPath} loop={true} style={{ width: "60px", height: "60px" }} />
+              <div className="flex-shrink-0">
+                <Lottie
+                  animationData={option.iconPath}
+                  loop={true}
+                  style={{ width: "50px", height: "50px" }}
+                  className="sm:w-[60px] sm:h-[60px]"
+                />
               </div>
-              <span className="text-xl font-normal text-left">{option.value}</span>
+              <span className="text-base sm:text-lg font-medium text-left leading-tight break-words">
+                {option.value}
+              </span>
             </div>
           </div>
         ))}
@@ -69,8 +83,7 @@ const MultipleChoiceQuestion = ({
           value={feedback}
           onChange={handleFeedbackChange}
           rows={4}
-          className="p-6 w-full mt-3 border-[#6969ff] border-dashed border-2 focus-visible:ring-0"
-          style={{ fontSize: "1.25rem" }}
+          className="p-4 w-full mt-4 border-gray-200 focus:border-primary focus:ring-primary rounded-xl text-lg resize-none shadow-sm"
         />
       )}
     </div>

@@ -9,7 +9,9 @@ export function SelectedSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <UserRoundCog className="text-white cursor-pointer w-8 h-8" />
+        <div className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer group">
+          <UserRoundCog className="text-primary group-hover:text-primary/80 w-6 h-6" />
+        </div>
       </SheetTrigger>
       <SheetContent className="w-96">
         <SheetHeader>

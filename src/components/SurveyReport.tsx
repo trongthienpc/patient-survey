@@ -51,9 +51,9 @@ export default function SurveyReport() {
         if (["satisfied", "very_satisfied"].includes(parsedAnswers?.rating)) setSatisfiedCount((prev) => prev + 1);
       });
       setData(fetchedData);
-      console.log("🚀 ~ fetchData ~ fetchedData:", fetchedData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
+
+    } catch {
+
       setError("Có lỗi xảy ra khi lấy dữ liệu.");
     } finally {
       setLoading(false);
@@ -208,9 +208,15 @@ export default function SurveyReport() {
       {data ? (
         <div ref={reportRef} className="bg-white p-6 rounded-lg shadow-md text-black w-full h-[450px] overflow-auto">
           <div className="text-center mb-4 flex gap-3">
-            <Card className="px-3 py-1 rounded">Tổng số khảo sát: {data.length}</Card>
-            <Card className="px-3 py-1 rounded bg-cyan-300">Khảo sát hài lòng: {satisfiedCount}</Card>
-            <Card className="px-3 py-1 rounded bg-amber-300">Khảo sát không hài lòng: {unsatisfiedCount}</Card>
+            <Card className="px-4 py-2 rounded-lg bg-gray-50 border-gray-200">
+              <span className="font-semibold text-gray-700">Tổng số: {data.length}</span>
+            </Card>
+            <Card className="px-4 py-2 rounded-lg bg-green-50 border-green-200 text-green-700">
+              <span className="font-semibold">Hài lòng: {satisfiedCount}</span>
+            </Card>
+            <Card className="px-4 py-2 rounded-lg bg-red-50 border-red-200 text-red-700">
+              <span className="font-semibold">Không hài lòng: {unsatisfiedCount}</span>
+            </Card>
           </div>
           <div className="text-center mb-4">
             <h1 className="text-2xl font-bold">SURVEY REPORT</h1>
@@ -221,11 +227,11 @@ export default function SurveyReport() {
 
           <table className="w-full border-collapse border border-gray-300 text-sm">
             <thead>
-              <tr className="bg-gray-200">
-                <th className="border p-2">Nhân viên</th>
-                <th className="border p-2">Khoa phòng</th>
-                <th className="border p-2">Khảo sát</th>
-                <th className="border p-2">Ngày thực hiện</th>
+              <tr className="bg-primary/5 text-primary">
+                <th className="border-b border-gray-200 p-3 text-left">Nhân viên</th>
+                <th className="border-b border-gray-200 p-3 text-center">Khoa phòng</th>
+                <th className="border-b border-gray-200 p-3 text-center">Khảo sát</th>
+                <th className="border-b border-gray-200 p-3 text-center">Ngày thực hiện</th>
               </tr>
             </thead>
             <tbody>

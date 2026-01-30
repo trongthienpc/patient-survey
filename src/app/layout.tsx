@@ -1,31 +1,41 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/providers/QueryProvider";
 import { Toaster } from "sonner";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { SelectionProvider } from "@/providers/SelectionContext";
+import { Header } from "@/components/layout/Header";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const svnGilroy = localFont({
+  src: [
+    {
+      path: "./fonts/SVN-Gilroy/SVN-Gilroy-Thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/SVN-Gilroy/SVN-Gilroy-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/SVN-Gilroy/SVN-Gilroy-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/SVN-Gilroy/SVN-Gilroy-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-svn-gilroy",
 });
 
 export const metadata: Metadata = {
-  title: "Phương Châu Hospital - Patient Survey",
-  description: "Development by zubu team",
+  title: "Khảo sát ý kiến khách hàng - Xây dựng bởi thientt@phuongchau.com",
+  description:
+    "Khảo sát ý kiến khách hàng - Xây dựng bởi thientt@phuongchau.com",
 };
 
 export const dynamic = "force-dynamic";
@@ -37,13 +47,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${svnGilroy.variable} antialiased`}>
         <SelectionProvider>
           <QueryProvider>
-            <div className="w-full h-screen relative bg-amber-300" style={{}}>
-              <BackgroundGradientAnimation />
-              <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center">
-                <div className="max-w-7xl px-6">{children}</div>
+            <div className="w-full min-h-[100dvh] relative bg-white flex flex-col items-center selection:bg-primary/20">
+              <div className="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(#a54687_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+              <div className="w-full relative z-10 flex-col flex h-[100dvh]">
+                <Header />
+                <main className="w-full h-full flex-1 flex flex-col items-center justify-start p-4 sm:p-6 md:p-8 overflow-hidden">
+                  <div className="w-full max-w-screen-xl h-full flex flex-col relative z-20">
+                    {children}
+                  </div>
+                </main>
               </div>
             </div>
           </QueryProvider>

@@ -14,25 +14,29 @@ const SurveyNavigation: React.FC<SurveyNavigationProps> = ({
   isMutating,
 }) => {
   return (
-    <div className="flex justify-between mt-4">
+    <div className="flex justify-between items-center w-full max-w-4xl mx-auto gap-3 sm:gap-4 px-1">
       <Button
-        className="text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
+        className="text-sm xs:text-base md:text-lg px-4 sm:px-6 h-10 xs:h-12 md:h-14 rounded-xl min-w-[90px] xs:min-w-[100px] transition-all hover:bg-slate-100 hover:text-primary hover:border-primary/50"
         onClick={() => handleNavigation("back")}
         disabled={currentQuestionIndex === 0}
+        variant="outline"
       >
-        Back
+        Quay lại
       </Button>
       {currentQuestionIndex === 1 ? (
         <Button
-          className="text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]"
+          className="text-sm xs:text-base md:text-lg px-6 sm:px-8 h-10 xs:h-12 md:h-14 rounded-xl min-w-[120px] xs:min-w-[140px] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
           onClick={handleSubmit}
           disabled={isMutating}
         >
-          {isMutating ? "Submitting" : "Submit"}
+          {isMutating ? "Đang gửi..." : "Hoàn thành"}
         </Button>
       ) : (
-        <Button className="text-xl px-6 h-12 bg-[#5046e6] hover:bg-[#6969ff]" onClick={() => handleNavigation("next")}>
-          Next
+        <Button
+          className="text-sm xs:text-base md:text-lg px-6 sm:px-8 h-10 xs:h-12 md:h-14 rounded-xl min-w-[120px] xs:min-w-[140px] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
+          onClick={() => handleNavigation("next")}
+        >
+          Tiếp tục
         </Button>
       )}
     </div>

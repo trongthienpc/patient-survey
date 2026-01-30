@@ -35,14 +35,20 @@ export const useSurvey = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { trigger, isMutating } = useSubmitSurvey();
 
-  const isLoading = useMemo(() => !selectedDepartment || !selectedUser, [selectedDepartment, selectedUser]);
+  const isLoading = useMemo(
+    () => !selectedDepartment || !selectedUser,
+    [selectedDepartment, selectedUser],
+  );
 
-  const handleAnswerChange = useCallback((questionId: string, answer: Partial<SurveyAnswer>) => {
-    setAnswers((prev) => ({
-      ...prev,
-      [questionId]: { ...prev[questionId], ...answer },
-    }));
-  }, []);
+  const handleAnswerChange = useCallback(
+    (questionId: string, answer: Partial<SurveyAnswer>) => {
+      setAnswers((prev) => ({
+        ...prev,
+        [questionId]: { ...prev[questionId], ...answer },
+      }));
+    },
+    [],
+  );
 
   const sectionImages: any = {
     "Bác sĩ khám": "/doctor-1.jpg",
@@ -61,7 +67,9 @@ export const useSurvey = () => {
 
       if (
         !currentAnswer ||
-        (!currentAnswer.rating && (!currentAnswer.selectedOptions || currentAnswer.selectedOptions.length === 0))
+        (!currentAnswer.rating &&
+          (!currentAnswer.selectedOptions ||
+            currentAnswer.selectedOptions.length === 0))
       ) {
         toast.warning("Vui lòng trả lời câu hỏi trước khi sang câu khác");
         return;
@@ -112,33 +120,38 @@ export const useSurvey = () => {
 
   const handleSubmit = async () => {
     if (!selectedDepartment) return;
-    console.log("🚀 ~ hasUnanswered ~ answers:", answers);
 
-    const questionKeys = [`${selectedDepartment?.label}-Q.0`, `${selectedDepartment?.label}-Q.1`];
+    const questionKeys = [
+      `${selectedDepartment?.label}-Q.0`,
+      `${selectedDepartment?.label}-Q.1`,
+    ];
 
     const hasUnanswered = questionKeys.some((questionId) => {
       const answer = answers[questionId];
-      console.log("🚀 ~ hasUnanswered ~ answer:", answer);
 
       if (!answer) return true; // Chưa có câu trả lời
 
       if (questionId.endsWith("Q.1")) {
         // Nếu là câu hỏi Q.1 (chọn lý do hài lòng/không hài lòng)
-        if ((!answer.selectedOptions || answer.selectedOptions.length === 0) && answer.feedback === "") return true; // Không chọn gì
+        if (
+          (!answer.selectedOptions || answer.selectedOptions.length === 0) &&
+          answer.feedback === ""
+        )
+          return true; // Không chọn gì
       }
 
       return false;
     });
 
     if (hasUnanswered) {
-      toast.warning("Vui lòng trả lời đầy đủ tất cả các câu hỏi trước khi gửi.");
+      toast.warning(
+        "Vui lòng trả lời đầy đủ tất cả các câu hỏi trước khi gửi.",
+      );
       return;
     }
 
     const surveyData = transformSurveyData(answers);
-
-    const response = await trigger(surveyData);
-    console.log("🚀 ~ handleSubmit ~ response:", response);
+    await trigger(surveyData);
     setIsSubmitted(true);
   };
 
@@ -154,13 +167,17 @@ export const useSurvey = () => {
           key="satisfaction"
           question={`Bạn hài lòng thế nào với ${selectedDepartment?.label}?`}
           initialAnswer={currentAnswer?.rating}
-          onAnswerChange={(rating) => handleAnswerChange(questionId, { rating })}
+          onAnswerChange={(rating) =>
+            handleAnswerChange(questionId, { rating })
+          }
         />
       );
     }
-    const isDissatisfied = ["very_dissatisfied", "dissatisfied", "neutral"].includes(
-      answers[`${selectedDepartment?.label}-Q.0`]?.rating || ""
-    );
+    const isDissatisfied = [
+      "very_dissatisfied",
+      "dissatisfied",
+      "neutral",
+    ].includes(answers[`${selectedDepartment?.label}-Q.0`]?.rating || "");
 
     return (
       <MultipleChoiceQuestion

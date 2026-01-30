@@ -12,23 +12,25 @@ const SelectedData = () => {
   if (isLoading) return null;
 
   return (
-    <div className="flex justify-between items-center py-6 px-1 gap-3 w-full">
-      <div className="text-xl text-white font-semibold flex gap-6 text-center">
-        <span className="text-white border bg-green-500 border-dashed rounded p-1 ">
+    <div className="flex justify-between items-center py-4 px-2 gap-3 w-full mb-4">
+      <div className="text-base text-gray-700 font-medium flex gap-4 items-center">
+        <span className="bg-primary/10 text-primary border border-primary/20 rounded-md px-3 py-2 flex items-center gap-2 text-lg">
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
           {selectedBranch?.label ?? "Chưa chọn"}
         </span>
 
         {selectedUser && (
-          <span className="text-white border bg-amber-500 border-dashed rounded p-1">
+          <span className="bg-primary text-white border border-primary/20 rounded-md px-3 py-2 hidden md:inline-block text-lg">
             {selectedUser.label} ({selectedDepartment?.label})
-            <br />
           </span>
         )}
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
         <SelectedSheet />
         <Link href={"/report"}>
-          <MessageSquare className="text-white cursor-pointer w-8 h-8" />
+          <div className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer">
+            <MessageSquare className="text-gray-500 w-6 h-6" />
+          </div>
         </Link>
       </div>
     </div>

@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate && bun run scripts/postbuild.ts",
     "prisma:push": "prisma db push",
     "prisma:pull": "prisma db pull",
     "prisma:generate": "prisma generate",
