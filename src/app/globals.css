@@ -22,6 +22,17 @@ h6 {
 
 @layer base {
   :root {
+    --ui-scale: 1;
+    --render-screen-width: 0;
+    --render-screen-height: 0;
+    --render-viewport-width: 0;
+    --render-viewport-height: 0;
+    --render-actual-width: 0;
+    --render-actual-height: 0;
+    --render-design-width: 1279;
+    --render-design-height: 800;
+    --render-dpr: 1;
+    --render-actual-scale: 1;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -84,6 +95,10 @@ h6 {
     @apply border-border;
   }
 
+  html {
+    font-size: calc(16px * var(--ui-scale));
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv11", "ss01";
@@ -109,6 +124,24 @@ h6 {
 
   .safe-bottom {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .scroll-down-linear {
+    animation: scroll-down-linear 1.2s linear infinite;
+  }
+}
+
+@keyframes scroll-down-linear {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(40%);
+    opacity: 0.2;
   }
 }
 

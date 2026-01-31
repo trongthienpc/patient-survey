@@ -206,7 +206,10 @@ export default function SurveyReport() {
       {error && <p className="text-red-500">{error}</p>}
 
       {data ? (
-        <div ref={reportRef} className="bg-white p-6 rounded-lg shadow-md text-black w-full h-[450px] overflow-auto">
+        <div
+          ref={reportRef}
+          className="bg-white p-6 rounded-lg shadow-md text-black w-full h-[calc(450px*var(--ui-scale))] overflow-auto"
+        >
           <div className="text-center mb-4 flex gap-3">
             <Card className="px-4 py-2 rounded-lg bg-gray-50 border-gray-200">
               <span className="font-semibold text-gray-700">Tổng số: {data.length}</span>

@@ -1,10 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Lottie from "lottie-react";
-import Party from "@/data/animations/party.json";
 import { Button } from "@/components/ui/button";
 const ThankYouPage = () => {
-  const [countdown, setCountdown] = useState(100); // Start countdown from 5 seconds
+  const [countdown, setCountdown] = useState(30); // Start countdown from 5 seconds
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,10 +20,10 @@ const ThankYouPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full gap-6">
-      <div className="text-center flex flex-col justify-center items-center ">
-        <div className="mb-6">
-          <h2 className="text-4xl font-normal text-gray-800">
+    <div className="flex flex-col items-center justify-center h-full gap-[calc(1.5rem*var(--ui-scale))] px-[calc(1rem*var(--ui-scale))]">
+      <div className="text-center flex flex-col justify-center items-center max-w-4xl w-full">
+        <div className="mb-[calc(1rem*var(--ui-scale))] w-full">
+          <h2 className="text-[calc(1.9rem*var(--ui-scale))] leading-[calc(2.6rem*var(--ui-scale))] font-normal text-gray-800 whitespace-normal break-words">
             <span className="text-primary font-bold"> Phương Châu </span>
             xin cảm ơn Quý khách đã tin tưởng và để lại những chia sẻ về{" "}
             <span className="text-primary font-bold underline decoration-primary/30">
@@ -35,32 +33,16 @@ const ThankYouPage = () => {
           </h2>
         </div>
         <div>
-          <p className="mt-2 text-4xl leading-[3rem] text-gray-600 font-light">
+          <p className="mt-[calc(0.5rem*var(--ui-scale))] text-[calc(2rem*var(--ui-scale))] leading-[calc(2.6rem*var(--ui-scale))] text-gray-600 font-light whitespace-normal break-words">
             Kính chúc <br /> Quý khách nhiều sức khỏe!
           </p>
         </div>
       </div>
-      <div className="flex gap-3">
-        <Lottie
-          animationData={Party}
-          loop={true}
-          style={{ width: 100, height: 100 }}
-        />
-        <Lottie
-          animationData={Party}
-          loop={true}
-          style={{ width: 100, height: 100 }}
-        />
-        <Lottie
-          animationData={Party}
-          loop={true}
-          style={{ width: 100, height: 100 }}
-        />
-      </div>
+
       <div>
-        <p className="text-xl text-gray-500">
+        <p className="text-[calc(1.25rem*var(--ui-scale))] leading-[calc(1.75rem*var(--ui-scale))] text-gray-500 whitespace-normal break-words text-center">
           Trang sẽ tự động làm mới trong{" "}
-          <span className="text-5xl font-extrabold text-primary">
+          <span className="text-[calc(3rem*var(--ui-scale))] font-extrabold text-primary">
             {countdown}
           </span>{" "}
           giây.

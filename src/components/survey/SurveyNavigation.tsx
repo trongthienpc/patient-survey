@@ -16,7 +16,7 @@ const SurveyNavigation: React.FC<SurveyNavigationProps> = ({
   return (
     <div className="flex justify-between items-center w-full max-w-4xl mx-auto gap-3 sm:gap-4 px-1">
       <Button
-        className="text-sm xs:text-base md:text-lg px-4 sm:px-6 h-10 xs:h-12 md:h-14 rounded-xl min-w-[90px] xs:min-w-[100px] transition-all hover:bg-slate-100 hover:text-primary hover:border-primary/50"
+        className="text-sm xs:text-base md:text-base px-4 sm:px-6 h-10 xs:h-11 md:h-12 rounded-xl min-w-[calc(90px*var(--ui-scale))] xs:min-w-[calc(100px*var(--ui-scale))] transition-all hover:bg-slate-100 hover:text-primary hover:border-primary/50"
         onClick={() => handleNavigation("back")}
         disabled={currentQuestionIndex === 0}
         variant="outline"
@@ -25,7 +25,7 @@ const SurveyNavigation: React.FC<SurveyNavigationProps> = ({
       </Button>
       {currentQuestionIndex === 1 ? (
         <Button
-          className="text-sm xs:text-base md:text-lg px-6 sm:px-8 h-10 xs:h-12 md:h-14 rounded-xl min-w-[120px] xs:min-w-[140px] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
+          className="text-sm xs:text-base md:text-base px-6 sm:px-8 h-10 xs:h-11 md:h-12 rounded-xl min-w-[calc(120px*var(--ui-scale))] xs:min-w-[calc(140px*var(--ui-scale))] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
           onClick={handleSubmit}
           disabled={isMutating}
         >
@@ -33,7 +33,7 @@ const SurveyNavigation: React.FC<SurveyNavigationProps> = ({
         </Button>
       ) : (
         <Button
-          className="text-sm xs:text-base md:text-lg px-6 sm:px-8 h-10 xs:h-12 md:h-14 rounded-xl min-w-[120px] xs:min-w-[140px] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
+          className="text-sm xs:text-base md:text-base px-6 sm:px-8 h-10 xs:h-11 md:h-12 rounded-xl min-w-[calc(120px*var(--ui-scale))] xs:min-w-[calc(140px*var(--ui-scale))] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95"
           onClick={() => handleNavigation("next")}
         >
           Tiếp tục

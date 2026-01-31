@@ -2,7 +2,7 @@
 import { useSelection } from "@/providers/SelectionContext";
 import { SelectedSheet } from "./SeletedSheet";
 import { useSurvey } from "./survey/useSurvey";
-import { MessageSquare } from "lucide-react";
+import { FileSearch2 } from "lucide-react";
 import Link from "next/link";
 
 const SelectedData = () => {
@@ -20,7 +20,7 @@ const SelectedData = () => {
         </span>
 
         {selectedUser && (
-          <span className="bg-primary text-white border border-primary/20 rounded-md px-3 py-2 hidden md:inline-block text-lg">
+          <span className="bg-primary text-white border border-primary/20 rounded-md px-3 py-2  md:inline-block text-lg">
             {selectedUser.label} ({selectedDepartment?.label})
           </span>
         )}
@@ -29,7 +29,7 @@ const SelectedData = () => {
         <SelectedSheet />
         <Link href={"/report"}>
           <div className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer">
-            <MessageSquare className="text-gray-500 w-6 h-6" />
+            <FileSearch2 className="text-primary w-6 h-6" />
           </div>
         </Link>
       </div>
